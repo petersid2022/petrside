@@ -1,22 +1,26 @@
 import Head from 'next/head';
 import Image from 'next/image';
-import Script from 'next/script';
-
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-const name = '[Your Name]';
-export const siteTitle = 'Next.js Sample Website';
+const name = 'Peter Sideris';
+export const siteTitle = 'petrside';
 
-export default function Layout({ children, home }) {
+export default function Layout({
+  children,
+  home,
+}: {
+  children: React.ReactNode;
+  home?: boolean;
+}) {
   return (
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
           name="description"
-          content="Learn how to build a personal website using Next.js"
+          content="petrside"
         />
         <meta
           property="og:image"
@@ -27,13 +31,6 @@ export default function Layout({ children, home }) {
         <meta name="og:title" content={siteTitle} />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <Script
-        src="https://connect.facebook.net/en_US/sdk.js"
-        strategy="lazyOnload"
-        onLoad={() =>
-          console.log(`script loaded correctly, window.FB has been populated`)
-        }
-      />
       <header className={styles.header}>
         {home ? (
           <>
