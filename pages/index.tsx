@@ -19,27 +19,35 @@ export default function Home({ allPostsData }: HomeProps) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <section className={utilStyles.headingMd}>
-                <p>Engineering student from Greece, here to document anything I happen to find interesting. 
-                <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>GitHub</a>
-                <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>LinkedIn</a>
-                <a href="https://drive.google.com/file/d/1zJyUxkw-olI919BbqOcqpjHIPcXhrA5u/view?usp=sharing" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>Resume</a>
+            <section className={utilStyles.introSection}>
+                <p className={utilStyles.introText}>
+                    Hi there! I'm a passionate electrical engineering student from Greece, here to document anything I find interesting.
                 </p>
+                <div className={utilStyles.socialLinks}>
+                    <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>LinkedIn</a>
+                    <a href="https://drive.google.com/file/d/1zJyUxkw-olI919BbqOcqpjHIPcXhrA5u/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+                </div>
             </section>
-            <section className={`${utilStyles.headingMd} `}>
+            <section className={utilStyles.blogSection}>
                 <h2 className={utilStyles.headingLg}>Blog</h2>
-                <ul className={utilStyles.list}>
+                <ul className={utilStyles.postList}>
                     {allPostsData.map(({ id, date, title }) => (
-                        <li className={utilStyles.listItem} key={id}>
-                            <Link href={`/posts/${id}`}>{title}</Link>
-                            <br />
-                            <small className={utilStyles.lightText}>
+                        <li className={utilStyles.postItem} key={id}>
+                            <Link href={`/posts/${id}`}>
+                                <h1 className={utilStyles.postLink}>{title}</h1>
+                            </Link>
+                            <small className={utilStyles.postDate}>
                                 <Date dateString={date} />
                             </small>
                         </li>
                     ))}
                 </ul>
             </section>
+            <footer className={utilStyles.footer}>
+                <p>© Peter Sideris. All rights and lefts reserved.</p>
+                <p>Made with ❤️ using next.js</p>
+            </footer>
         </Layout>
     );
 }

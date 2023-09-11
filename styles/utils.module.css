@@ -55,3 +55,71 @@
   color: #666;
   margin: 1rem 0;
 }
+
+/* Home.module.css */
+
+.introSection {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.introText {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  font-size: 25px;
+}
+
+.link {
+  display: inline-block;
+  margin-right: 20px;
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/*
+.blogSection {
+  margin-top: 2rem;
+}
+*/
+
+.postList {
+  list-style: none;
+  padding: 0;
+}
+
+.postItem {
+  margin-bottom: 1.25rem;
+}
+
+.postLink {
+  color: #333;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.postLink:hover {
+  text-decoration: underline;
+}
+
+.postDate {
+  color: #666;
+}
+
+.footer {
+    text-align: center;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.arthro {
+    max-width: 100rem;
+}
