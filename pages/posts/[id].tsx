@@ -19,14 +19,18 @@ export default function Post({
       <Head>
         <title>{postData.title}</title>
       </Head>
+      <section className={utilStyles.introSection}>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1 className={utilStyles.headingPostTitle}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
-        <div className={utilStyles.headingMd} dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+        <div
+          className={utilStyles.content}
+          dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+        />
       </article>
-      <br />
+      </section>
       <br />
     </Layout>
   );

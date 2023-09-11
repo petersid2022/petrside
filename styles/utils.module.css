@@ -3,7 +3,8 @@
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -0.05rem;
-  margin: 1rem 0;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
 }
 
 .headingXl {
@@ -14,15 +15,37 @@
   margin: 1rem 0;
 }
 
+.headingPostTitle {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  font-weight: 800;
+  letter-spacing: -0.05rem;
+  margin-bottom: 1rem;
+}
+
+.headingAbout {
+  font-size: 2rem;
+  line-height: 1.4;
+  margin-bottom: 0rem;
+  margin-top: -1rem;
+}
+
 .headingLg {
   font-size: 2rem;
   line-height: 1.4;
-  margin: 1rem 0;
+  margin-top: 0rem;
+  margin-bottom: 0.4rem;
 }
 
 .headingMd {
   font-size: 1.6rem;
   line-height: 1.5;
+}
+
+.headingDd {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  font-weight: bold;
 }
 
 .borderCircle {
@@ -53,10 +76,7 @@
 
 .lightText {
   color: #666;
-  margin: 1rem 0;
 }
-
-/* Home.module.css */
 
 .introSection {
   padding: 2rem;
@@ -65,9 +85,18 @@
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.introSectionAllPosts {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .introText {
   font-size: 1.5rem;
-  margin-bottom: 1rem;
 }
 
 .socialLinks {
@@ -97,13 +126,17 @@
 }
 
 .postItem {
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .postLink {
   color: #333;
   text-decoration: none;
   font-weight: 600;
+}
+.postLinkH1 {
+  color: #333;
+  text-decoration: none;
 }
 
 .postLink:hover {
@@ -115,11 +148,29 @@
 }
 
 .footer {
-    text-align: center;
-    color: #666;
-    font-size: 0.8rem;
+  text-align: center;
+  color: #666;
+  font-size: 0.8rem;
+  margin-bottom: -1rem;
 }
 
-.arthro {
-    max-width: 100rem;
+.content {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.latestPostContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Add other styles as needed */
+}
+
+.showAllLink {
+    text-decoration: none;
+    color: #0070f3; /* You can customize the color */
+    font-weight: bold;
+    /* Add other link styles as needed */
 }

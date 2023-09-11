@@ -66,7 +66,7 @@ export default function Layout({
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={utilStyles.headingMd}>
+        <div className={utilStyles.headingDd}>
           <Link href="/">← Back to home</Link>
         </div>
       )}
