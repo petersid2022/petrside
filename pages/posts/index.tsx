@@ -20,7 +20,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             <Head>
                 <title>All Blog Posts</title>
             </Head>
-            <section className={utilStyles.introSectionAllPosts}>
+            <section className={utilStyles.introSectionAllPosts} style={{ maxWidth: '60rem' }}>
                 <h1 className={utilStyles.headingLg} style={{ marginTop: '-0.2rem' }}>All Blog Posts</h1>
                 <ul className={utilStyles.postList}>
                     {allPostsData.map((post) => (

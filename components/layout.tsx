@@ -2,7 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
+import { FaBackwardFast } from 'react-icons/fa6';
+import { useRouter } from 'next/router'
 
 const name = 'Peter Sideris';
 export const siteTitle = 'petrside';
@@ -14,6 +15,12 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
+
+const router = useRouter();
+    const goBack = () => {
+        router.push('/');
+    };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -46,6 +53,7 @@ export default function Layout({
           </>
         ) : (
           <>
+          {/*
             <Link href="/">
               <Image
                 priority
@@ -61,13 +69,30 @@ export default function Layout({
                 {name}
               </Link>
             </h2>
+              <Image
+                priority
+                src="/images/profile.jpg"
+                className={utilStyles.borderCircle}
+                height={108}
+                width={108}
+                alt={name}
+              />
+            <h2 className={utilStyles.headingLg}>
+                {name}
+            </h2>
+            */}
           </>
         )}
       </header>
       <main>{children}</main>
       {!home && (
         <div className={utilStyles.headingDd}>
-          <Link href="/">← Back to home</Link>
+          <button onClick={goBack} style={{ display: 'inline', textDecoration: 'none' }}>
+            <span style={{ display: 'flex', alignItems: 'center' }}>
+              <FaBackwardFast style={{ marginTop: '2px', marginRight: '10px' }} />
+            Home 
+            </span>
+          </button>
         </div>
       )}
     </div>
