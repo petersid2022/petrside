@@ -28,7 +28,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div className={utilStyles.socialLinks}>
                     <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">GitHub</a>
                     <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>LinkedIn</a>
-                    <a href="https://drive.google.com/file/d/1zJyUxkw-olI919BbqOcqpjHIPcXhrA5u/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
+                    <a href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
                 <hr />
                 <div className={utilStyles.latestPostContainer}>
