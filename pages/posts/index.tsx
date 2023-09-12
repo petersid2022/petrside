@@ -28,7 +28,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             </Head>
             <section className={utilStyles.introSectionAllPosts}>
                 <div className={utilStyles.headingWithSearch}>
-                    <h1 className={utilStyles.headingLg}>All Blog Posts</h1>
+                    <h1 className={utilStyles.headingPostTitle}>All Blog Posts</h1>
                     {/*
                     <input
                         type="text"

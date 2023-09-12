@@ -2,6 +2,7 @@ import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import Head from 'next/head';
 import Date from '../../components/date';
+import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
 
@@ -25,6 +26,7 @@ export default function Post({
         <h1 style={{marginTop:'-20px'}} className={utilStyles.headingPostTitle}>{postData.title}</h1>
         <div style={{marginTop:'2px', marginBottom:'8px'}} className={utilStyles.lightText}>
           <Date dateString={postData.date} />
+          <span> · <WordCount input={postData.contentHtml} /> min read</span>
         </div>
         <div
           className={utilStyles.content}
