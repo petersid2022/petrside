@@ -28,6 +28,7 @@ export default function Post({
         </div>
         <div
           className={utilStyles.content}
+          style={{marginBottom:'-1rem'}}
           dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
         />
       </article>

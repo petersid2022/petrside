@@ -18,7 +18,8 @@ export default function Layout({
 
 const router = useRouter();
     const goBack = () => {
-        router.push('/');
+        //router.push('/');
+        router.back();
     };
 
   return (
@@ -89,7 +90,7 @@ const router = useRouter();
           <button onClick={goBack} style={{ marginLeft: '10px', marginBottom:'10px', textDecoration: 'none' }}>
             <span className={utilStyles.iconText}>
               <FaAnglesLeft className={utilStyles.icon} />
-              Home 
+              Go Back 
             </span>
           </button>
         </div>
