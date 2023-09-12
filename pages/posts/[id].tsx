@@ -22,7 +22,7 @@ export default function Post({
       </Head>
       <section className={utilStyles.introSection}>
       <article>
-        <h1 className={utilStyles.headingPostTitle}>{postData.title}</h1>
+        <h1 style={{marginTop:'-20px'}} className={utilStyles.headingPostTitle}>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>
@@ -32,7 +32,6 @@ export default function Post({
         />
       </article>
       </section>
-      <br />
     </Layout>
   );
 }

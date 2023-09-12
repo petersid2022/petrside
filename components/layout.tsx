@@ -84,10 +84,9 @@ const router = useRouter();
           </>
         )}
       </header>
-      <main>{children}</main>
       {!home && (
         <div className={utilStyles.headingDd}>
-          <button onClick={goBack} style={{ textDecoration: 'none' }}>
+          <button onClick={goBack} style={{ marginLeft: '10px', marginBottom:'10px', textDecoration: 'none' }}>
             <span className={utilStyles.iconText}>
               <FaAnglesLeft className={utilStyles.icon} />
               Home 
@@ -95,6 +94,7 @@ const router = useRouter();
           </button>
         </div>
       )}
+      <main>{children}</main>
     </div>
   );
 }
