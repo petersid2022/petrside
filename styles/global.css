@@ -44,6 +44,6 @@ hr {
   color: #333; /* Change the line color */
   border-width: 2px; /* Adjust the line thickness */
   border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
-  margin-top: 0.5rem;
-  margin-bottom: 0.3rem;
+  margin-top: 5px;
+  margin-bottom: 3px;
 }

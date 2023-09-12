@@ -21,15 +21,36 @@ export default function Home({ allPostsData }: HomeProps) {
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.introSection}>
-                <h2 className={utilStyles.headingAbout}>About</h2>
+                <h2 className={utilStyles.headingAbout}>About Me</h2>
                 <p className={utilStyles.introText}>
                     Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool.
                 </p>
-                <div className={utilStyles.socialLinks}>
+                {/*
+                <div style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
                     <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">GitHub</a>
-                    <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" className={utilStyles.link}>LinkedIn</a>
+                </div>
+                <div style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
+                    <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
+                </div>
+                <div className={utilStyles.showlinksBorder}>
                     <a href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
+                */}
+                    <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
+                        <span style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
+                    GitHub
+                    </span>
+                    </Link>
+                    <Link href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
+                    <span style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
+                    LinkedIn 
+                    </span>
+                    </Link>
+                    <Link href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <span className={utilStyles.showlinksBorder}>
+                    Resume 
+                    </span>
+                    </Link>
                 <hr />
                 <div className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingLg}>Latest Blog Post</h2>

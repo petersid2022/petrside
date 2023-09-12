@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
@@ -15,23 +16,39 @@ interface PostsPageProps {
 }
 
 export default function PostsPage({ allPostsData }: PostsPageProps) {
+    const [searchQuery, setSearchQuery] = useState('');
+    const filteredPosts = allPostsData.filter((post) =>
+        post.title.toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
     return (
         <Layout>
             <Head>
                 <title>All Blog Posts</title>
             </Head>
-            <section className={utilStyles.introSectionAllPosts} style={{ maxWidth: '60rem' }}>
-                <h1 className={utilStyles.headingLg} style={{ marginTop: '-0.2rem' }}>All Blog Posts</h1>
-                <ul className={utilStyles.postList}>
-                    {allPostsData.map((post) => (
+            <section className={utilStyles.introSectionAllPosts}>
+                <div className={utilStyles.headingWithSearch}>
+                    <h1 className={utilStyles.headingLg}>All Blog Posts</h1>
+                    {/*
+                    <input
+                        type="text"
+                        placeholder="Search..."
+                        value={searchQuery}
+                        onChange={(e) => setSearchQuery(e.target.value)}
+                        className={utilStyles.searchInput}
+                    />
+                    */}
+                </div>
+                <ul style={{marginTop:'10px'}} className={utilStyles.postList}>
+                    {filteredPosts.map((post) => (
                         <li className={utilStyles.postItem} key={post.id}>
                             <Link href={`/posts/${post.id}`}>
-                                <p className={utilStyles.postLink}>{post.title}</p>
+                                <h1 className={utilStyles.postLink}>{post.title}</h1>
                             </Link>
                             <div className={utilStyles.lightText}>
                                 {new Date(post.date).toLocaleDateString('en-GB', {
                                     day: '2-digit',
-                                    month: '2-digit',
+                                    month: 'long',
                                     year: 'numeric',
                                 })}
                             </div>
@@ -39,7 +56,6 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                     ))}
                 </ul>
             </section>
-            <br />
         </Layout>
     );
 }

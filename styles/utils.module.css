@@ -26,14 +26,13 @@
   font-size: 2rem;
   line-height: 1.4;
   margin-bottom: 0px;
-  margin-top: -1rem;
+  margin-top: -1.2rem;
 }
 
 .headingLg {
   font-size: 2rem;
   line-height: 1.4;
-  margin-top: 0rem;
-  margin-bottom: 0.4rem;
+  margin: 0px;
 }
 
 .headingMd {
@@ -104,6 +103,32 @@
   font-size: 25px;
 }
 
+.showlinksBorder {
+    margin: 10px 0px;
+    font-weight: 500;
+    font-size: 25px;
+    border: 2px solid #0070f3;
+    padding: 0px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+    display: inline-block; /* Make it a block-level element */
+    text-align: center; /* Center the text horizontally */
+    width: auto; /* Let the button adjust its width based on content */
+    background-color: transparent; /* Make the background transparent by default */
+    color: #0070f3; /* Set the default text color */
+    text-decoration: none;
+}
+
+.showlinksBorder:hover {
+    color: #fff; /* Change the text color on hover */
+    background-color: #0070f3; /* Fill the button with a background color on hover */
+    border-color: #0070f3; /* Change the border color on hover */
+}
+
+.showlinksBorder:focus {
+    outline: none; /* Remove the focus outline */
+}
+
 .link {
   display: inline-block;
   margin-right: 20px;
@@ -127,7 +152,7 @@
 }
 
 .postItem {
-  margin-bottom: 0rem;
+  margin-bottom: 0px;
 }
 
 .postLink {
@@ -162,7 +187,7 @@
 }
 
 .latestPostContainer {
-        margin: 0px 0px;
+    margin: 0px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,8 +196,28 @@
 
 .showAllLink {
     text-decoration: none;
-    color: #0070f3; /* You can customize the color */
+    color: #0070f3;
     font-weight: 500;
+    font-size: 20px;
+    border: 2px solid #0070f3;
+    margin-top: 5px;
+    padding: 1px 8px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+    display: inline-block; /* Make it a block-level element */
+    text-align: center; /* Center the text horizontally */
+    width: auto; /* Let the button adjust its width based on content */
+    background-color: transparent; /* Make the background transparent by default */
+}
+
+.showAllLink:hover {
+    color: #fff; /* Change the text color on hover */
+    background-color: #0070f3; /* Fill the button with a background color on hover */
+    border-color: #0070f3; /* Change the border color on hover */
+}
+
+.showAllLink:focus {
+    outline: none; /* Remove the focus outline */
 }
 
 /* Add this CSS to your stylesheet */
@@ -191,5 +236,28 @@
 .iconText:hover {
   transform: translateX(-10px); /* Adjust the value to move the icon left on hover */
   color: blue; /* Adjust the color change on hover as desired */
+}
+
+.searchInput {
+    width: 571.9px; /* Adjust the width as needed */
+    padding: 5px;
+    margin-left: 20px; /* Add margin to create spacing */
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+/* Style for input on focus (optional) */
+.searchInput:focus {
+    outline: none; /* Remove the default focus outline */
+    border-color: #0070f3; /* Change the border color when focused */
+    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* Add a subtle box shadow when focused */
+}
+
+/* Add this CSS to your stylesheet */
+.headingWithSearch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
