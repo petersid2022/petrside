@@ -49,7 +49,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 </ul>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
-                    <p>Made with ❤️ using next.js</p>
+                    <p>Made with ❤️ using Next.js</p>
                 </footer>
             </section>
         </Layout>

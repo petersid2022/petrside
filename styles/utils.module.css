@@ -25,7 +25,7 @@
 .headingAbout {
   font-size: 2rem;
   line-height: 1.4;
-  margin-bottom: 0rem;
+  margin-bottom: 0px;
   margin-top: -1rem;
 }
 
@@ -75,6 +75,8 @@
 
 .lightText {
   color: #666;
+  margin-top: 0rem;
+  margin-bottom: 0rem;
 }
 
 .introSection {
@@ -95,10 +97,12 @@
 }
 
 .introText {
+  margin: 0px 0px;
   font-size: 1.5rem;
 }
 
 .socialLinks {
+  margin: 0px 0px;
   font-size: 25px;
 }
 
@@ -160,6 +164,7 @@
 }
 
 .latestPostContainer {
+        margin: 0px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -171,3 +176,22 @@
     color: #0070f3; /* You can customize the color */
     font-weight: 500;
 }
+
+/* Add this CSS to your stylesheet */
+.iconText {
+  display: flex;
+  align-items: center;
+  font-weight: normal; /* Initial font-weight */
+  transition: transform 0.3s, color 0.3s; /* Add smooth transitions */
+}
+
+.icon {
+  margin-top: 2px;
+  margin-right: 10px;
+}
+
+.iconText:hover {
+  transform: translateX(-10px); /* Adjust the value to move the icon left on hover */
+  color: blue; /* Adjust the color change on hover as desired */
+}
+

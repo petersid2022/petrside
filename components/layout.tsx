@@ -2,7 +2,7 @@ import Head from 'next/head';
 import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
-import { FaBackwardFast } from 'react-icons/fa6';
+import { FaAnglesLeft} from 'react-icons/fa6';
 import { useRouter } from 'next/router'
 
 const name = 'Peter Sideris';
@@ -87,10 +87,10 @@ const router = useRouter();
       <main>{children}</main>
       {!home && (
         <div className={utilStyles.headingDd}>
-          <button onClick={goBack} style={{ display: 'inline', textDecoration: 'none' }}>
-            <span style={{ display: 'flex', alignItems: 'center' }}>
-              <FaBackwardFast style={{ marginTop: '2px', marginRight: '10px' }} />
-            Home 
+          <button onClick={goBack} style={{ textDecoration: 'none' }}>
+            <span className={utilStyles.iconText}>
+              <FaAnglesLeft className={utilStyles.icon} />
+              Home 
             </span>
           </button>
         </div>
