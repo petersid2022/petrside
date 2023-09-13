@@ -5,6 +5,7 @@ import Date from '../../components/date';
 import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
+import { RxDotFilled } from 'react-icons/rx';
 
 export default function Post({
   postData,
@@ -24,9 +25,14 @@ export default function Post({
       <section className={utilStyles.introSection}>
       <article>
         <h1 style={{marginTop:'-20px'}} className={utilStyles.headingPostTitle}>{postData.title}</h1>
-        <div style={{marginTop:'2px', marginBottom:'8px'}} className={utilStyles.lightText}>
+        <div style={{marginTop:'2px', marginBottom:'2px'}} className={utilStyles.lightText}>
+        <div style={{ display: 'flex', alignItems: 'center' }}>
           <Date dateString={postData.date} />
-          <span> · <WordCount input={postData.contentHtml} /> min read</span>
+                <span style={{ marginLeft:'2px', marginRight: '2px' }}><RxDotFilled /></span>
+                <span>
+                    <WordCount input={postData.contentHtml} />min read
+                </span>
+            </div>
         </div>
         <div
           className={utilStyles.content}

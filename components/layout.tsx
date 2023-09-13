@@ -50,7 +50,7 @@ const router = useRouter();
               width={144}
               alt={name}
             />
-            <h1 className={utilStyles.heading2Xl}>{name}</h1>
+            <h1 className={utilStyles.TEST}>{name}</h1>
           </>
         ) : (
           <>
