@@ -87,6 +87,7 @@
 
 .lightText {
   color: #666;
+  margin-top: -5px;
 }
 
 .introSection {
@@ -279,7 +280,6 @@
     border: 2px dashed #d3d3d3;
     padding: 0px 8px;
     border-radius: 5px;
-    display: inline-block;
     width: auto;
     background-color: #f0f0f0;
     text-decoration: none;
@@ -287,6 +287,22 @@
 }
 
 .SoftBorderAroundLatestPost:hover {
+    transform: scale(1.02); /* Scale up the element on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+}
+
+.SoftBorderAroundAllPost {
+    margin-bottom: 10px;
+    border: 2px dashed #d3d3d3;
+    padding: 0px 8px;
+    border-radius: 5px;
+    width: auto;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.SoftBorderAroundAllPost:hover {
     transform: scale(1.02); /* Scale up the element on hover */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
 }

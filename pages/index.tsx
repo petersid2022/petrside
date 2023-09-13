@@ -60,7 +60,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
-                    <Link href={`/posts/${latestPost.id}`}>
+                    <Link style={{textDecoration:'none'}} href={`/posts/${latestPost.id}`}>
                         <div className={utilStyles.SoftBorderAroundLatestPost}>
                             <h1 style={{textDecoration:'none'}} className={utilStyles.postLink}>{latestPost.title}</h1>
                             <div className={utilStyles.lightText}>

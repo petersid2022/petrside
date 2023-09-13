@@ -41,18 +41,20 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                 </div>
                 <ul style={{marginTop:'10px'}} className={utilStyles.postList}>
                     {filteredPosts.map((post) => (
-                        <li className={utilStyles.postItem} key={post.id}>
-                            <Link href={`/posts/${post.id}`}>
-                                <h1 className={utilStyles.postLink}>{post.title}</h1>
-                            </Link>
-                            <div className={utilStyles.lightText}>
-                                {new Date(post.date).toLocaleDateString('en-GB', {
-                                    day: '2-digit',
-                                    month: 'long',
-                                    year: 'numeric',
-                                })}
-                            </div>
-                        </li>
+                            <li className={utilStyles.postItem} key={post.id}>
+                                <Link style={{textDecoration:'none'}} href={`/posts/${post.id}`}>
+                                    <div className={utilStyles.SoftBorderAroundLatestPost}>
+                                        <h1 style={{textDecoration:'none'}} className={utilStyles.postLink}>{post.title}</h1>
+                                            <div className={utilStyles.lightText}>
+                                                {new Date(post.date).toLocaleDateString('en-GB', {
+                                                    day: '2-digit',
+                                                    month: 'long',
+                                                    year: 'numeric',
+                                                })}
+                                            </div>
+                                    </div>
+                                </Link>
+                            </li>
                     ))}
                 </ul>
             </section>
