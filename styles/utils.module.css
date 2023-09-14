@@ -45,7 +45,7 @@
 .headingLg {
   font-size: 2rem;
   line-height: 1.4;
-  margin: 0px;
+  margin: 0px 0px;
 }
 
 .headingMd {
@@ -118,7 +118,6 @@
 }
 
 .showlinksBorder {
-    margin: 10px 0px;
     font-weight: 500;
     font-size: 25px;
     border: 2px solid #0070f3;
@@ -188,10 +187,10 @@
 }
 
 .footer {
-  text-align: center;
   color: #666;
+  text-align: center;
   font-size: 0.8rem;
-  margin-bottom: -1rem;
+  margin-bottom: -1.65rem;
 }
 
 .content {
@@ -205,7 +204,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Add other styles as needed */
 }
 
 .showAllLink {
@@ -214,8 +212,7 @@
     font-weight: 500;
     font-size: 20px;
     border: 2px solid #0070f3;
-    margin-top: 5px;
-    padding: 1px 8px;
+    padding: 0px 8px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
     display: inline-block; /* Make it a block-level element */
@@ -243,6 +240,7 @@
 }
 
 .icon {
+  font-weight: lighpaddingt; /* Initial font-weight */
   margin-top: 2px;
   margin-right: 10px;
 }
@@ -275,15 +273,23 @@
     justify-content: space-between;
 }
 
-.SoftBorderAroundLatestPost {
-    margin: 10px 0px;
+.SoftBorderAroundAbout {
     border: 2px dashed #d3d3d3;
     padding: 0px 8px;
     border-radius: 5px;
     width: auto;
     background-color: #f0f0f0;
     text-decoration: none;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.SoftBorderAroundLatestPost {
+    border: 2px dashed #d3d3d3;
+    padding: 0px 8px;
+    border-radius: 5px;
+    width: auto;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .SoftBorderAroundLatestPost:hover {
@@ -299,7 +305,7 @@
     width: auto;
     background-color: #f0f0f0;
     text-decoration: none;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .SoftBorderAroundAllPost:hover {

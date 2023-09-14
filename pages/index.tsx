@@ -22,9 +22,11 @@ export default function Home({ allPostsData }: HomeProps) {
             </Head>
             <section className={utilStyles.introSection}>
                 <h2 className={utilStyles.headingAbout}>About Me</h2>
-                <p className={utilStyles.introText}>
-                    Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool.
-                </p>
+                <div className={utilStyles.SoftBorderAroundAbout}>
+                    <p className={utilStyles.introText}>
+                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool.
+                    </p>
+                </div>
                 {/*
                 <div style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
                     <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -36,28 +38,29 @@ export default function Home({ allPostsData }: HomeProps) {
                     <a href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
                 </div>
                 */}
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ display: 'flex', alignItems: 'center' }}>
                     <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
-                        <span style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
-                    GitHub
-                    </span>
+                        <span className={utilStyles.showlinksBorder}>GitHub</span>
                     </Link>
+                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
                     <Link href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
-                    <span style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
-                    LinkedIn 
-                    </span>
+                        <span className={utilStyles.showlinksBorder}>LinkedIn</span>
                     </Link>
+                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
                     <Link href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                    <span className={utilStyles.showlinksBorder}>
-                    Resume 
-                    </span>
+                        <span className={utilStyles.showlinksBorder}>Resume</span>
                     </Link>
+                </div>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
                 <div className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
-                        <span className={utilStyles.showAllLink}>Show All</span>
+                        <span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>
                     </Link>
                 </div>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
                     <Link style={{textDecoration:'none'}} href={`/posts/${latestPost.id}`}>
@@ -70,9 +73,13 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                     </li>
                 </ul>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
-                    <p>Made with ❤️ using Next.js</p>
+                    <Link style={{color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                        <p>Made with ❤️ using Next.js</p>
+                    </Link>
+                    <i>My bad on the website design – I built it, but the frontend's a bit rough around the edges!</i>
                 </footer>
             </section>
         </Layout>

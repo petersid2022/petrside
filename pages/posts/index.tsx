@@ -28,7 +28,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             </Head>
             <section className={utilStyles.introSectionAllPosts}>
                 <div className={utilStyles.headingWithSearch}>
-                    <h1 className={utilStyles.headingPostTitle}>All Blog Posts</h1>
+                    <h1 style={{marginTop:'-5px'}} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
                     {/*
                     <input
                         type="text"
@@ -43,7 +43,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                     {filteredPosts.map((post) => (
                             <li className={utilStyles.postItem} key={post.id}>
                                 <Link style={{textDecoration:'none'}} href={`/posts/${post.id}`}>
-                                    <div className={utilStyles.SoftBorderAroundLatestPost}>
+                                    <div className={utilStyles.SoftBorderAroundAllPost}>
                                         <h1 style={{textDecoration:'none'}} className={utilStyles.postLink}>{post.title}</h1>
                                             <div className={utilStyles.lightText}>
                                                 {new Date(post.date).toLocaleDateString('en-GB', {

@@ -6,6 +6,8 @@ import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { RxDotFilled } from 'react-icons/rx';
+import {AiOutlineRead} from 'react-icons/ai';
+import {AiOutlineCalendar} from 'react-icons/ai';
 
 export default function Post({
   postData,
@@ -27,10 +29,12 @@ export default function Post({
         <h1 style={{marginTop:'-20px'}} className={utilStyles.headingPostTitle}>{postData.title}</h1>
         <div style={{marginTop:'2px', marginBottom:'2px'}} className={utilStyles.lightText}>
         <div style={{ display: 'flex', alignItems: 'center' }}>
+                <span style={{ marginLeft:'0px', marginRight: '5px', fontSize: '20px'}}><AiOutlineCalendar/></span>
           <Date dateString={postData.date} />
-                <span style={{ marginLeft:'2px', marginRight: '2px' }}><RxDotFilled /></span>
+                <span style={{ marginLeft:'6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
+                <span style={{ marginLeft:'2px', marginRight: '5px', fontSize: '20px'  }}><AiOutlineRead/></span>
                 <span>
-                    <WordCount input={postData.contentHtml} />min read
+                    <WordCount input={postData.contentHtml} /> min read
                 </span>
             </div>
         </div>
