@@ -39,6 +39,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 */}
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                     <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
                         <span className={utilStyles.showlinksBorder}>GitHub</span>
@@ -53,13 +54,17 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                 </div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
-                <div className={utilStyles.latestPostContainer}>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
-                        <span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>
+                        <span className={utilStyles.showAllLink}>Show All</span>
+                        {/*<span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>*/}
                     </Link>
                 </div>
+                {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
@@ -74,12 +79,12 @@ export default function Home({ allPostsData }: HomeProps) {
                     </li>
                 </ul>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
                     <Link style={{color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                         <p>Made with ❤️ using Next.js</p>
                     </Link>
-                    <i>My bad on the website design – I built it, but the frontend's a bit rough around the edges!</i>
                 </footer>
             </section>
         </Layout>
