@@ -3,6 +3,7 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { FaAnglesLeft} from 'react-icons/fa6';
+import {TiArrowBack} from 'react-icons/ti';
 import { useRouter } from 'next/router'
 
 const name = 'Peter Sideris';
@@ -42,12 +43,13 @@ const router = useRouter();
       <header className={styles.header}>
         {home ? (
           <>
+            <div style={{marginTop:'-20px'}}></div>
             <Image
               priority
               src="/images/profile.jpg"
               className={utilStyles.borderCircle}
-              height={144}
-              width={144}
+              height={180}
+              width={180}
               alt={name}
             />
             <h1 className={utilStyles.TEST}>{name}</h1>
@@ -89,7 +91,7 @@ const router = useRouter();
         <div className={utilStyles.headingDd}>
           <button onClick={goBack} style={{ marginLeft: '10px', marginBottom:'10px', textDecoration: 'none' }}>
             <span className={utilStyles.iconText}>
-              <FaAnglesLeft className={utilStyles.icon} />
+              <TiArrowBack className={utilStyles.icon} />
               Go Back 
             </span>
           </button>

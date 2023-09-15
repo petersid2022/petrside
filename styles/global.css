@@ -19,7 +19,6 @@ html,body {
     sans-serif;
   line-height: 1.6;
   font-size: 18px;
-  background-color: #d3d3d3;
 }
 
 * {
@@ -45,3 +44,30 @@ hr {
   border-width: 2px; /* Adjust the line thickness */
   border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
 }
+
+/* For WebKit (Chrome, Safari, and newer versions of Edge) */
+/* You can adjust the colors to your preference */
+::-webkit-scrollbar {
+  width: 10px; /* Width of the vertical scrollbar */
+  height: 10px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #0070f9; /* Color of the scrollbar thumb */
+  border-radius: 0px; /* Rounded corners for the thumb */
+}
+
+/* For Firefox */
+/* You can adjust the colors to your preference */
+scrollbar-color: #0070f3 #f0f0f0; /* Color of the thumb and track */
+
+/* For Internet Explorer and older versions of Edge */
+/* You can adjust the colors to your preference */
+scrollbar-face-color: #0070f3; /* Color of the scrollbar face */
+scrollbar-highlight-color: #f0f0f0; /* Color of the scrollbar highlight */
+scrollbar-shadow-color: #f0f0f0; /* Color of the scrollbar shadow */
+scrollbar-3dlight-color: #f0f0f0; /* Color of the scrollbar light shadow */
+scrollbar-darkshadow-color: #f0f0f0; /* Color of the scrollbar dark shadow */
+scrollbar-track-color: #f0f0f0; /* Color of the scrollbar track */
+scrollbar-arrow-color: #0070f3; /* Color of the scrollbar arrows */
+

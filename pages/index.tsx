@@ -57,15 +57,16 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                {/*<div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>*/}
                 <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
-                    <h2 className={utilStyles.headingLg}>Latest Blog Post</h2>
+                    <h2 style={{marginTop:'-4px'}} className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
                         <span className={utilStyles.showAllLink}>Show All</span>
                         {/*<span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>*/}
                     </Link>
                 </div>
                 {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
-                <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
                     <Link style={{textDecoration:'none'}} href={`/posts/${latestPost.id}`}>
@@ -78,7 +79,6 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                     </li>
                 </ul>
-                <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
