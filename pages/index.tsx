@@ -22,9 +22,10 @@ export default function Home({ allPostsData }: HomeProps) {
             </Head>
             <section className={utilStyles.introSection}>
                 <h2 className={utilStyles.headingAbout}>About Me</h2>
+                <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.SoftBorderAroundAbout}>
                     <p className={utilStyles.introText}>
-                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool.
+                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool. Thanks for stopping by!
                     </p>
                 </div>
                 {/*
@@ -58,7 +59,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <hr />
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 {/*<div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>*/}
-                <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
+                <div style={{marginTop:'-4.2px'}} className={utilStyles.latestPostContainer}>
                     <h2 style={{marginTop:'-4px'}} className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
                         <span className={utilStyles.showAllLink}>Show All</span>
@@ -82,7 +83,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
-                    <Link style={{color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                    <Link style={{ display:'inline-block', color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                         <p>Made with ❤️ using Next.js</p>
                     </Link>
                 </footer>

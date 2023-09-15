@@ -88,13 +88,15 @@ const router = useRouter();
         )}
       </header>
       {!home && (
+        <div style={{ marginRight:'50px', marginLeft: '10px', marginBottom: '10px' }}>
         <div className={utilStyles.headingDd}>
-          <button onClick={goBack} style={{ marginLeft: '10px', marginBottom:'10px', textDecoration: 'none' }}>
+            <button onClick={goBack} style={{ textDecoration: 'none' }}>
             <span className={utilStyles.iconText}>
               <TiArrowBack className={utilStyles.icon} />
               Go Back 
             </span>
           </button>
+        </div>
         </div>
       )}
       <main>{children}</main>

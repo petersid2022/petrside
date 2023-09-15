@@ -15,7 +15,7 @@
   letter-spacing: -0.05rem;
   margin-top: 0.7rem;
   margin-bottom: 1rem;
-  color: #a0b9ff;
+color: #CCE689;
 }
 
 .headingXl {
@@ -36,17 +36,21 @@
 }
 
 .headingAbout {
+    /*
         text-decoration: black wavy underline;
-    text-decoration-thickness: 1px;
+        text-decoration-thickness: 1px;
+    */
   font-size: 2rem;
   line-height: 1.4;
   margin-bottom: 0px;
-  margin-top: -1.4rem;
+  margin-top: -1.65rem;
 }
 
 .headingLg {
+    /*
         text-decoration: black wavy underline;
-    text-decoration-thickness: 1px;
+        text-decoration-thickness: 1px;
+    */
   font-size: 2rem;
   line-height: 1.4;
   margin: 0px 0px;
@@ -95,7 +99,7 @@
 }
 
 .introSection {
-  padding: 2rem;
+  padding: 2rem 1.5rem;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -211,6 +215,7 @@
 }
 
 .showAllLink {
+    margin-top: 2px;
     text-decoration: none;
     color: #0070f3;
     font-weight: 500;
