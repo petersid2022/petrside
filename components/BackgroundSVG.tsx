@@ -17,9 +17,9 @@ const BackgroundSVG: React.FC = () => {
       >
         <defs>
           <linearGradient id="bg">
-            <stop offset="0%" style={{ stopColor: 'rgba(130, 158, 249, 0.06)' }} />
-            <stop offset="50%" style={{ stopColor: 'rgba(76, 190, 255, 0.6)' }} />
-            <stop offset="100%" style={{ stopColor: 'rgba(115, 209, 72, 0.2)' }} />
+            <stop offset="0%" style={{ stopColor: '#282A36' }} />
+            <stop offset="50%" style={{ stopColor: '#1A5780' }} />
+            <stop offset="100%" style={{ stopColor: '007ACC' }} />
           </linearGradient>
           <path
             id="wave"
