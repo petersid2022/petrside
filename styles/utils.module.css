@@ -10,12 +10,12 @@
 
 .TEST {
   font-size: 3rem;
-  line-height: 1.2;
+  line-height: 50px;
   font-weight: 800;
-  letter-spacing: -0.05rem;
-  margin-top: 0.7rem;
-  margin-bottom: 1rem;
-color: #A49551;
+  letter-spacing: -0.02rem;
+  margin: 25px 0px;
+/*color: #EAEAEA;*/
+  color: #CCCCCC;
 }
 
 .headingXl {
@@ -41,7 +41,6 @@ color: #A49551;
         text-decoration-thickness: 1px;
     */
   font-size: 2rem;
-  line-height: 1.4;
   margin-bottom: 0px;
   margin-top: -1.65rem;
 }
@@ -100,24 +99,25 @@ color: #A49551;
 
 .introSection {
   padding: 2rem 1.5rem;
-  background-color: #fff;
+  background-color: #EAEAEA;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .introSectionAllPosts {
   padding-top: 1rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   padding-bottom: 1rem;
-  background-color: #F5F5F5;
+  background-color: #EAEAEA;
   border-radius: 8px;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .introText {
   margin: 0px 0px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
+  text-align: justify;
 }
 
 .socialLinks {
@@ -128,7 +128,7 @@ color: #A49551;
 .showlinksBorder {
     font-weight: 500;
     font-size: 25px;
-    border: 2px solid #0070f3;
+    border: 2px solid #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
@@ -136,14 +136,14 @@ color: #A49551;
     text-align: center; /* Center the text horizontally */
     width: auto; /* Let the button adjust its width based on content */
     background-color: transparent; /* Make the background transparent by default */
-    color: #0070f3; /* Set the default text color */
+    color: #282a36; /* Set the default text color */
     text-decoration: none;
 }
 
 .showlinksBorder:hover {
     color: #fff; /* Change the text color on hover */
-    background-color: #0070f3; /* Fill the button with a background color on hover */
-    border-color: #0070f3; /* Change the border color on hover */
+    background-color: #282a36; /* Fill the button with a background color on hover */
+    border-color: #282a36; /* Change the border color on hover */
 }
 
 .showlinksBorder:focus {
@@ -198,7 +198,7 @@ color: #A49551;
   color: #666;
   text-align: center;
   font-size: 0.8rem;
-  margin-bottom: -1.65rem;
+  margin-bottom: -29px;
 }
 
 .content {
@@ -217,10 +217,10 @@ color: #A49551;
 .showAllLink {
     margin-top: 2px;
     text-decoration: none;
-    color: #0070f3;
+    color: #282a36;
     font-weight: 500;
     font-size: 20px;
-    border: 2px solid #0070f3;
+    border: 2px solid #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
@@ -232,8 +232,8 @@ color: #A49551;
 
 .showAllLink:hover {
     color: #fff; /* Change the text color on hover */
-    background-color: #0070f3; /* Fill the button with a background color on hover */
-    border-color: #0070f3; /* Change the border color on hover */
+    background-color: #282a36; /* Fill the button with a background color on hover */
+    border-color: #282a36; /* Change the border color on hover */
 }
 
 .showAllLink:focus {
@@ -284,7 +284,7 @@ color: #A49551;
 }
 
 .SoftBorderAroundAbout {
-    border: 2px dashed #d3d3d3;
+    border: 2px dashed #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     width: auto;
@@ -293,7 +293,7 @@ color: #A49551;
 }
 
 .SoftBorderAroundLatestPost {
-    border: 2px dashed #d3d3d3;
+    border: 2px dashed #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     width: auto;
@@ -331,7 +331,7 @@ position: fixed;
   height: 100%;
   box-sizing: border-box;
   display: block;
-  background-color: #0e4166;
-  background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #0e4166);
+  background-color: #282A36;
+  background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #282A36);
   z-index: -1;
 }

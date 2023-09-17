@@ -40,7 +40,7 @@ img {
 }
 
 hr {
-  color: #333; /* Change the line color */
+  border-color: #282a36; /* Change the line color */
   border-width: 2px; /* Adjust the line thickness */
   border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
 }
@@ -53,6 +53,6 @@ hr {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #0070f9; /* Color of the scrollbar thumb */
+  background-color: #282a36; /* Color of the scrollbar thumb */
   border-radius: 0px; /* Rounded corners for the thumb */
 }

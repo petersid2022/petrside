@@ -57,6 +57,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
+                <div style={{ height: '6px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 {/*<div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>*/}
                 <div style={{marginTop:'-4.2px'}} className={utilStyles.latestPostContainer}>
@@ -68,6 +69,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
                 <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
+                <div style={{ height: '6px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
                     <Link style={{textDecoration:'none'}} href={`/posts/${latestPost.id}`}>
@@ -80,7 +82,7 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                     </li>
                 </ul>
-                <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '7px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
                     <Link style={{ display:'inline-block', color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
