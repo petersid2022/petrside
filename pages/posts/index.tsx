@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+//import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
@@ -16,10 +17,10 @@ interface PostsPageProps {
 }
 
 export default function PostsPage({ allPostsData }: PostsPageProps) {
-    const [searchQuery, setSearchQuery] = useState('');
-    const filteredPosts = allPostsData.filter((post) =>
-        post.title.toLowerCase().includes(searchQuery.toLowerCase())
-    );
+    //const [searchQuery, setSearchQuery] = useState('');
+    //const filteredPosts = allPostsData.filter((post) =>
+    //    post.title.toLowerCase().includes(searchQuery.toLowerCase())
+    //);
 
     return (
         <Layout>
@@ -28,7 +29,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             </Head>
             <section className={utilStyles.introSectionAllPosts}>
                 <div className={utilStyles.headingWithSearch}>
-                    <h1 style={{marginTop:'-5px'}} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
+                    <h1 style={{ marginTop: '-5px' }} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
                     {/*
                     <input
                         type="text"
@@ -39,22 +40,22 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                     />
                     */}
                 </div>
-                <ul style={{marginTop:'10px'}} className={utilStyles.postList}>
-                    {filteredPosts.map((post) => (
-                            <li className={utilStyles.postItem} key={post.id}>
-                                <Link style={{textDecoration:'none'}} href={`/posts/${post.id}`}>
-                                    <div className={utilStyles.SoftBorderAroundAllPost}>
-                                        <h1 style={{textDecoration:'none'}} className={utilStyles.postLink}>{post.title}</h1>
-                                            <div className={utilStyles.lightText}>
-                                                {new Date(post.date).toLocaleDateString('en-GB', {
-                                                    day: '2-digit',
-                                                    month: 'long',
-                                                    year: 'numeric',
-                                                })}
-                                            </div>
+                <ul style={{ marginTop: '10px' }} className={utilStyles.postList}>
+                    {allPostsData.map((post) => (
+                        <li className={utilStyles.postItem} key={post.id}>
+                            <Link style={{ textDecoration: 'none' }} href={`/posts/${post.id}`}>
+                                <div className={utilStyles.SoftBorderAroundAllPost}>
+                                    <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{post.title}</h1>
+                                    <div className={utilStyles.lightText}>
+                                        {new Date(post.date).toLocaleDateString('en-GB', {
+                                            day: '2-digit',
+                                            month: 'long',
+                                            year: 'numeric',
+                                        })}
                                     </div>
-                                </Link>
-                            </li>
+                                </div>
+                            </Link>
+                        </li>
                     ))}
                 </ul>
             </section>

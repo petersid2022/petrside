@@ -60,8 +60,8 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '6px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 {/*<div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>*/}
-                <div style={{marginTop:'-4.2px'}} className={utilStyles.latestPostContainer}>
-                    <h2 style={{marginTop:'-4px'}} className={utilStyles.headingLg}>Latest Blog Post</h2>
+                <div style={{ marginTop: '-4.2px' }} className={utilStyles.latestPostContainer}>
+                    <h2 style={{ marginTop: '-4px' }} className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
                         <span className={utilStyles.showAllLink}>Show All</span>
                         {/*<span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>*/}
@@ -72,20 +72,20 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '6px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
-                    <Link style={{textDecoration:'none'}} href={`/posts/${latestPost.id}`}>
-                        <div className={utilStyles.SoftBorderAroundLatestPost}>
-                            <h1 style={{textDecoration:'none'}} className={utilStyles.postLink}>{latestPost.title}</h1>
-                            <div className={utilStyles.lightText}>
-                                <Date dateString={latestPost.date} />
+                        <Link style={{ textDecoration: 'none' }} href={`/posts/${latestPost.id}`}>
+                            <div className={utilStyles.SoftBorderAroundLatestPost}>
+                                <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{latestPost.title}</h1>
+                                <div className={utilStyles.lightText}>
+                                    <Date dateString={latestPost.date} />
+                                </div>
                             </div>
-                        </div>
-                    </Link>
+                        </Link>
                     </li>
                 </ul>
                 <div style={{ height: '7px', visibility: 'hidden' }}></div>
                 <footer className={utilStyles.footer}>
                     <p>© Peter Sideris. All rights and lefts reserved.</p>
-                    <Link style={{ display:'inline-block', color: '#666'}} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                    <Link style={{ display: 'inline-block', color: '#666' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                         <p>Made with ❤️ using Next.js</p>
                     </Link>
                 </footer>

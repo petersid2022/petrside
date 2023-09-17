@@ -20,5 +20,5 @@ export default function WordCount({ input }: { input: string }) {
             wordCount++
         }
     }
-    return Math.ceil((wordCount/225))
+    return Math.ceil((wordCount / 225))
 }

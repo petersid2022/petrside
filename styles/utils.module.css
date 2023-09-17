@@ -9,13 +9,18 @@
 }
 
 .TEST {
-  font-size: 3rem;
-  line-height: 50px;
+  font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
-  margin: 25px 0px;
-/*color: #EAEAEA;*/
-  color: #CCCCCC;
+  margin-top: -5px;
+  margin-bottom: 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+/*
+color: #EAEAEA;
+color: #CCCCCC;
+*/
+    color: #f0f0f0;
 }
 
 .headingXl {
@@ -67,7 +72,16 @@
 }
 
 .borderCircle {
-  border-radius: 999999px;
+    border-radius: 4px;
+    margin: 0px 0px;
+}
+
+.quote {
+  font-style: italic; /* Italicize the text to indicate a quote */
+  font-size: 1rem; /* Adjust the font size as needed */
+  color: #ccc; /* Set the text color */
+  padding-top: 10px;
+  text-align: center;
 }
 
 .colorInherit {
@@ -131,7 +145,7 @@
     border: 2px solid #282a36;
     padding: 0px 8px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+    transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
     display: inline-block; /* Make it a block-level element */
     text-align: center; /* Center the text horizontally */
     width: auto; /* Let the button adjust its width based on content */
@@ -223,7 +237,7 @@
     border: 2px solid #282a36;
     padding: 0px 8px;
     border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+    transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
     display: inline-block; /* Make it a block-level element */
     text-align: center; /* Center the text horizontally */
     width: auto; /* Let the button adjust its width based on content */
@@ -299,7 +313,7 @@
     width: auto;
     background-color: #f0f0f0;
     text-decoration: none;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .SoftBorderAroundLatestPost:hover {
@@ -309,7 +323,7 @@
 
 .SoftBorderAroundAllPost {
     margin-bottom: 10px;
-    border: 2px dashed #d3d3d3;
+    border: 2px dashed #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     width: auto;
