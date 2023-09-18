@@ -346,7 +346,7 @@ position: fixed;
   height: 100%;
   box-sizing: border-box;
   display: block;
-  background-color: #282A36;
-  background-image: linear-gradient(to bottom, rgba(14, 65, 102, 0.86), #282A36);
+  background-color: #0D0E0E;
+  background-image: #0D0E0E;
   z-index: -1;
 }
