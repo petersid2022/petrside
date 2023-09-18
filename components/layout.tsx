@@ -55,10 +55,12 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
+                        {/*
                         <Link style={{ display: 'inline-block'}} href={"https://youtu.be/2yfXgu37iyI?feature=shared"} target="_blank" rel="noopener noreferrer">
                             <p className={utilStyles.quote}>"...the whole point of a Doomsday machine is lost if you keep it a secret..." -Dr. Strangelove</p>
                         </Link>
-                        <h1 className={utilStyles.TEST}>{name}</h1>
+                        */}
+                        <h1 className={utilStyles.NameCss}>{name}</h1>
                     </>
                 ) : (
                     <>
