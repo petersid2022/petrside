@@ -146,6 +146,14 @@ const BackgroundSVG: React.FC = () => {
             gui.add(uniforms.yScale, 'value', 0.2, 1.0).name('Y Scale');
             gui.add(uniforms.distortion, 'value', 0.001, 0.1).name('Distortion');
         }
+
+        if (!isDesktop){
+            // Only attach event listeners and create dat.gui if in the browser environment
+            window.addEventListener('resize', onResize);
+
+            // Start animation loop
+            animate();
+        }
     }, []);
 
     return <div className={utilStyles.backsvg}><canvas id="webgl-canvas"></canvas></div>;

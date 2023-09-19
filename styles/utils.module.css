@@ -438,11 +438,21 @@
     text-decoration: none;
     margin: 10px 0px;
     color: #333;
+    font-size: 17px;
     font-weight: 600;
   }
   .introText {
     margin: 10px 10px;
     font-size: 1.4rem;
     text-align: justify;
+  }
+  .headingAbout {
+    font-size: 2rem;
+    margin-top: -20px;
+  }
+  .headingLg {
+    font-size: 2rem;
+    line-height: 1.4;
+    margin: 0px 0px;
   }
 }
