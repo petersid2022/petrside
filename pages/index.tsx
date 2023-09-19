@@ -28,17 +28,6 @@ export default function Home({ allPostsData }: HomeProps) {
                         Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool. Thanks for stopping by!
                     </p>
                 </div>
-                {/*
-                <div style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
-                    <a href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">GitHub</a>
-                </div>
-                <div style={{marginRight:'15px'}} className={utilStyles.showlinksBorder}>
-                    <a href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer" >LinkedIn</a>
-                </div>
-                <div className={utilStyles.showlinksBorder}>
-                    <a href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</a>
-                </div>
-                */}
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ display: 'flex', alignItems: 'center' }}>

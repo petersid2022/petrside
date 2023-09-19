@@ -17,11 +17,11 @@
   margin-bottom: 5px;
   margin-left: 0px;
   margin-right: 0px;
+  color: #f0f0f0;
 /*
 color: #EAEAEA;
 color: #CCCCCC;
 */
-    color: #f0f0f0;
 }
 
 .headingXl {
@@ -73,8 +73,8 @@ color: #CCCCCC;
 }
 
 .borderCircle {
-    border-radius: 4px;
-    margin: 0px 0px;
+  border-radius: 4px;
+  margin: 0px 0px;
 }
 
 .quote {
@@ -141,28 +141,28 @@ color: #CCCCCC;
 }
 
 .showlinksBorder {
-    font-weight: 500;
-    font-size: 25px;
-    border: 2px solid #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
-    display: inline-block; /* Make it a block-level element */
-    text-align: center; /* Center the text horizontally */
-    width: auto; /* Let the button adjust its width based on content */
-    background-color: transparent; /* Make the background transparent by default */
-    color: #282a36; /* Set the default text color */
-    text-decoration: none;
+  font-weight: 500;
+  font-size: 25px;
+  border: 2px solid #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+  display: inline-block; /* Make it a block-level element */
+  text-align: center; /* Center the text horizontally */
+  width: auto; /* Let the button adjust its width based on content */
+  background-color: transparent; /* Make the background transparent by default */
+  color: #282a36; /* Set the default text color */
+  text-decoration: none;
 }
 
 .showlinksBorder:hover {
-    color: #fff; /* Change the text color on hover */
-    background-color: #282a36; /* Fill the button with a background color on hover */
-    border-color: #282a36; /* Change the border color on hover */
+  color: #fff; /* Change the text color on hover */
+  background-color: #282a36; /* Fill the button with a background color on hover */
+  border-color: #282a36; /* Change the border color on hover */
 }
 
 .showlinksBorder:focus {
-    outline: none; /* Remove the focus outline */
+  outline: none; /* Remove the focus outline */
 }
 
 .link {
@@ -175,12 +175,6 @@ color: #CCCCCC;
 .link:hover {
   text-decoration: underline;
 }
-
-/*
-.blogSection {
-  margin-top: 2rem;
-}
-*/
 
 .postList {
   list-style: none;
@@ -223,36 +217,36 @@ color: #CCCCCC;
 }
 
 .latestPostContainer {
-    margin: 0px 0px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  margin: 0px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .showAllLink {
-    margin-top: 2px;
-    text-decoration: none;
-    color: #282a36;
-    font-weight: 500;
-    font-size: 20px;
-    border: 2px solid #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
-    display: inline-block; /* Make it a block-level element */
-    text-align: center; /* Center the text horizontally */
-    width: auto; /* Let the button adjust its width based on content */
-    background-color: transparent; /* Make the background transparent by default */
+  margin-top: 2px;
+  text-decoration: none;
+  color: #282a36;
+  font-weight: 500;
+  font-size: 20px;
+  border: 2px solid #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
+  display: inline-block; /* Make it a block-level element */
+  text-align: center; /* Center the text horizontally */
+  width: auto; /* Let the button adjust its width based on content */
+  background-color: transparent; /* Make the background transparent by default */
 }
 
 .showAllLink:hover {
-    color: #fff; /* Change the text color on hover */
-    background-color: #282a36; /* Fill the button with a background color on hover */
-    border-color: #282a36; /* Change the border color on hover */
+  color: #fff; /* Change the text color on hover */
+  background-color: #282a36; /* Fill the button with a background color on hover */
+  border-color: #282a36; /* Change the border color on hover */
 }
 
 .showAllLink:focus {
-    outline: none; /* Remove the focus outline */
+  outline: none; /* Remove the focus outline */
 }
 
 /* Add this CSS to your stylesheet */
@@ -276,70 +270,70 @@ color: #CCCCCC;
 }
 
 .searchInput {
-    width: 571.9px; /* Adjust the width as needed */
-    padding: 5px;
-    margin-left: 20px; /* Add margin to create spacing */
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    font-size: 18px;
+  width: 571.9px; /* Adjust the width as needed */
+  padding: 5px;
+  margin-left: 20px; /* Add margin to create spacing */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px;
 }
 
 /* Style for input on focus (optional) */
 .searchInput:focus {
-    outline: none; /* Remove the default focus outline */
-    border-color: #0070f3; /* Change the border color when focused */
-    box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* Add a subtle box shadow when focused */
+  outline: none; /* Remove the default focus outline */
+  border-color: #0070f3; /* Change the border color when focused */
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* Add a subtle box shadow when focused */
 }
 
 /* Add this CSS to your stylesheet */
 .headingWithSearch {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .SoftBorderAroundAbout {
-    border: 2px dashed #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    width: auto;
-    background-color: #f0f0f0;
-    text-decoration: none;
+  border: 2px dashed #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  width: auto;
+  background-color: #f0f0f0;
+  text-decoration: none;
 }
 
 .SoftBorderAroundLatestPost {
-    border: 2px dashed #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    width: auto;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px dashed #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  width: auto;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .SoftBorderAroundLatestPost:hover {
-    transform: scale(1.02); /* Scale up the element on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+  transform: scale(1.02); /* Scale up the element on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
 }
 
 .SoftBorderAroundAllPost {
-    margin-bottom: 10px;
-    border: 2px dashed #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    width: auto;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  margin-bottom: 10px;
+  border: 2px dashed #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  width: auto;
+  background-color: #f0f0f0;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
 .SoftBorderAroundAllPost:hover {
-    transform: scale(1.02); /* Scale up the element on hover */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+  transform: scale(1.02); /* Scale up the element on hover */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
 }
 
-.SVG {
-position: fixed;
+.backsvg {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

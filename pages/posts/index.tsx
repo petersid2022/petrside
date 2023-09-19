@@ -1,10 +1,9 @@
 import React from 'react';
-//import React, { useState } from 'react';
+import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import { getAllPostIds, getPostData } from '../../lib/posts';
-import Link from 'next/link';
 
 interface PostData {
     id: string;
@@ -17,11 +16,6 @@ interface PostsPageProps {
 }
 
 export default function PostsPage({ allPostsData }: PostsPageProps) {
-    //const [searchQuery, setSearchQuery] = useState('');
-    //const filteredPosts = allPostsData.filter((post) =>
-    //    post.title.toLowerCase().includes(searchQuery.toLowerCase())
-    //);
-
     return (
         <Layout>
             <Head>
@@ -30,15 +24,6 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             <section className={utilStyles.introSectionAllPosts}>
                 <div className={utilStyles.headingWithSearch}>
                     <h1 style={{ marginTop: '-5px' }} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
-                    {/*
-                    <input
-                        type="text"
-                        placeholder="Search..."
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        className={utilStyles.searchInput}
-                    />
-                    */}
                 </div>
                 <ul style={{ marginTop: '10px' }} className={utilStyles.postList}>
                     {allPostsData.map((post) => (
