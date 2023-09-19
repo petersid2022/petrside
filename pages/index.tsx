@@ -30,7 +30,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
-                <div style={{ display: 'flex', alignItems: 'center' }}>
+                <div className={utilStyles.showlinksBorderContainer}>
                     <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
                         <span className={utilStyles.showlinksBorder}>GitHub</span>
                     </Link>

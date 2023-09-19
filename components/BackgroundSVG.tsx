@@ -129,7 +129,9 @@ const BackgroundSVG: React.FC = () => {
             uniforms.resolution.value.set(windowWidth, windowHeight);
         };
 
-        if (typeof window !== 'undefined') {
+        const isDesktop = window.innerWidth >= 768; // Adjust the breakpoint as needed
+
+        if (isDesktop && typeof window !== 'undefined') {
             // Only attach event listeners and create dat.gui if in the browser environment
             window.addEventListener('resize', onResize);
 

@@ -61,3 +61,44 @@ hr {
   border-radius: 0px; /* Rounded corners for the thumb */
 }
 
+
+@media (max-width: 767px) {
+  /* Styles for mobile devices */
+  html,body {
+    padding: 0;
+    margin: 0;
+    font-family:
+      -apple-system,
+      BlinkMacSystemFont,
+      Segoe UI,
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      Fira Sans,
+      Droid Sans,
+      Helvetica Neue,
+      sans-serif;
+    line-height: 1;
+    font-size: 14px;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: #0070f3;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  hr {
+    border-color: #282a36; /* Change the line color */
+    border-width: 2px; /* Adjust the line thickness */
+    border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
+  }
+}
