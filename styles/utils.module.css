@@ -9,7 +9,7 @@
 }
 
 .NameCss {
-      text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
@@ -18,10 +18,6 @@
   margin-left: 0px;
   margin-right: 0px;
   color: #f0f0f0;
-/*
-color: #EAEAEA;
-color: #CCCCCC;
-*/
 }
 
 .headingXl {
@@ -42,20 +38,12 @@ color: #CCCCCC;
 }
 
 .headingAbout {
-    /*
-        text-decoration: black wavy underline;
-        text-decoration-thickness: 1px;
-    */
   font-size: 2rem;
   margin-bottom: 0px;
   margin-top: -1.65rem;
 }
 
 .headingLg {
-    /*
-        text-decoration: black wavy underline;
-        text-decoration-thickness: 1px;
-    */
   font-size: 2rem;
   line-height: 1.4;
   margin: 0px 0px;
@@ -78,9 +66,9 @@ color: #CCCCCC;
 }
 
 .quote {
-  font-style: italic; /* Italicize the text to indicate a quote */
-  font-size: 1rem; /* Adjust the font size as needed */
-  color: #ccc; /* Set the text color */
+  font-style: italic; 
+  font-size: 1rem; 
+  color: #ccc; 
   padding-top: 10px;
   text-align: center;
 }
@@ -146,23 +134,23 @@ color: #CCCCCC;
   border: 2px solid #282a36;
   padding: 0px 8px;
   border-radius: 5px;
-  transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
-  display: inline-block; /* Make it a block-level element */
-  text-align: center; /* Center the text horizontally */
-  width: auto; /* Let the button adjust its width based on content */
-  background-color: transparent; /* Make the background transparent by default */
-  color: #282a36; /* Set the default text color */
+  transition: background-color 0.1s, color 0.3s, border-color 0.3s; 
+  display: inline-block; 
+  text-align: center; 
+  width: auto; 
+  background-color: transparent; 
+  color: #282a36; 
   text-decoration: none;
 }
 
 .showlinksBorder:hover {
-  color: #fff; /* Change the text color on hover */
-  background-color: #282a36; /* Fill the button with a background color on hover */
-  border-color: #282a36; /* Change the border color on hover */
+  color: #fff; 
+  background-color: #282a36; 
+  border-color: #282a36; 
 }
 
 .showlinksBorder:focus {
-  outline: none; /* Remove the focus outline */
+  outline: none; 
 }
 
 .link {
@@ -232,61 +220,44 @@ color: #CCCCCC;
   border: 2px solid #282a36;
   padding: 0px 8px;
   border-radius: 5px;
-  transition: background-color 0.1s, color 0.3s, border-color 0.3s; /* Add smooth transitions for color, background, and border */
-  display: inline-block; /* Make it a block-level element */
-  text-align: center; /* Center the text horizontally */
-  width: auto; /* Let the button adjust its width based on content */
-  background-color: transparent; /* Make the background transparent by default */
+  transition: background-color 0.1s, color 0.3s, border-color 0.3s; 
+  display: inline-block; 
+  text-align: center; 
+  width: auto; 
+  background-color: transparent; 
 }
 
 .showAllLink:hover {
-  color: #fff; /* Change the text color on hover */
-  background-color: #282a36; /* Fill the button with a background color on hover */
-  border-color: #282a36; /* Change the border color on hover */
+  color: #fff; 
+  background-color: #282a36; 
+  border-color: #282a36; 
 }
 
 .showAllLink:focus {
-  outline: none; /* Remove the focus outline */
+  outline: none; 
 }
 
-/* Add this CSS to your stylesheet */
 .iconText {
   display: flex;
   align-items: center;
-  transition: transform 0.3s, color 0.3s; /* Add smooth transitions */
+  transition: transform 0.3s, color 0.3s; 
   color: #a0b9ff;
   font-weight: bold;
 }
 
 .icon {
-  font-weight: lighpaddingt; /* Initial font-weight */
+  font-weight: lighpaddingt; 
   margin-top: 2px;
   margin-right: 5px;
 }
 
 .iconText:hover {
-  transform: translateX(-10px); /* Adjust the value to move the icon left on hover */
-  text-decoration: green wavy underline;
+  transform: translateX(-10px);
+  color: #a0e9ff;
+  font-weight: bold;
 }
 
-.searchInput {
-  width: 571.9px; /* Adjust the width as needed */
-  padding: 5px;
-  margin-left: 20px; /* Add margin to create spacing */
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  font-size: 18px;
-}
-
-/* Style for input on focus (optional) */
-.searchInput:focus {
-  outline: none; /* Remove the default focus outline */
-  border-color: #0070f3; /* Change the border color when focused */
-  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* Add a subtle box shadow when focused */
-}
-
-/* Add this CSS to your stylesheet */
-.headingWithSearch {
+.headingAllPosts {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -312,8 +283,8 @@ color: #CCCCCC;
 }
 
 .SoftBorderAroundLatestPost:hover {
-  transform: scale(1.02); /* Scale up the element on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+  transform: scale(1.02); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .SoftBorderAroundAllPost {
@@ -328,8 +299,8 @@ color: #CCCCCC;
 }
 
 .SoftBorderAroundAllPost:hover {
-  transform: scale(1.02); /* Scale up the element on hover */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow on hover */
+  transform: scale(1.02); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
 
 .backsvg {

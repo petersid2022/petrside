@@ -22,7 +22,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                 <title>All Blog Posts</title>
             </Head>
             <section className={utilStyles.introSectionAllPosts}>
-                <div className={utilStyles.headingWithSearch}>
+                <div className={utilStyles.headingAllPosts}>
                     <h1 style={{ marginTop: '-5px' }} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
                 </div>
                 <ul style={{ marginTop: '10px' }} className={utilStyles.postList}>
