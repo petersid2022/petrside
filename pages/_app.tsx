@@ -1,5 +1,6 @@
 import '../styles/global.css';
 import { AppProps } from 'next/app';
+import { Analytics } from '@vercel/analytics/react';
 import BackgroundSVG from '../components/BackgroundSVG';
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -7,6 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <>
             <BackgroundSVG />
             <Component {...pageProps} />;
+            <Analytics />
         </>
     );
 }

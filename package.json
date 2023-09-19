@@ -9,6 +9,7 @@
     "@types/dat.gui": "^0.7.10",
     "@types/gsap": "^3.0.0",
     "@types/three": "^0.156.0",
+    "@vercel/analytics": "^1.0.2",
     "dat.gui": "^0.7.9",
     "date-fns": "^2.29.3",
     "gray-matter": "^4.0.3",
