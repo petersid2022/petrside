@@ -9,9 +9,9 @@
 }
 
 .NameCss {
-  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  /*
+    text-shadow: 0 0 2px rgba(255, 255, 255, 1);
+  */
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
@@ -19,11 +19,11 @@
   margin-bottom: 5px;
   margin-left: 0px;
   margin-right: 0px;
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
   /*
    color: #f0f0f0;
-   color: #282b30;
    */
-  color: #f0f0f0;
+    color: #f9f9f9;
 }
 
 .headingXl {
@@ -110,7 +110,9 @@
   padding: 2rem 1.5rem;
   background-color: #EAEAEA;
   border-radius: 8px;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+  /*
+  box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
+  */
 }
 
 .introSectionAllPosts {
