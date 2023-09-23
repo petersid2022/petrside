@@ -9,7 +9,9 @@
 }
 
 .NameCss {
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   font-size: 2.5rem;
   font-weight: 800;
   letter-spacing: -0.02rem;
@@ -17,6 +19,10 @@
   margin-bottom: 5px;
   margin-left: 0px;
   margin-right: 0px;
+  /*
+   color: #f0f0f0;
+   color: #282b30;
+   */
   color: #f0f0f0;
 }
 
@@ -61,7 +67,7 @@
 }
 
 .borderCircle {
-  border-radius: 4px;
+  border-radius: 8px;
   margin: 0px 0px;
 }
 
@@ -104,7 +110,7 @@
   padding: 2rem 1.5rem;
   background-color: #EAEAEA;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
 }
 
 .introSectionAllPosts {
@@ -114,7 +120,7 @@
   padding-bottom: 1rem;
   background-color: #EAEAEA;
   border-radius: 8px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .introText {
@@ -310,15 +316,16 @@
 
 .backsvg {
   position: fixed;
+  pointer-events: none;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   box-sizing: border-box;
   display: block;
-  background-color: #0D0E0E;
-  background-image: #0D0E0E;
-  z-index: -1;
+  background-color: #F0F0F0;
+  background-image: #F0F0F0;
+  z-index: -100;
 }
 
 @media (max-width: 767px) {
@@ -349,7 +356,7 @@
     text-decoration: none;
   }
   .NameCss {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+    text-shadow: 0 0 10px rgba(140, 140, 140, 1); /* Glow effect */
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.02rem;
@@ -357,7 +364,7 @@
     margin-bottom: 19px;
     margin-left: 0px;
     margin-right: 0px;
-    color: #f0f0f0;
+    color: #ccc;
   }
   .showlinksBorderContainer {
     display: block;
