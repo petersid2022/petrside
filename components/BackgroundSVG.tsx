@@ -1,63 +1,137 @@
 import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import { vertexShader, fragmentShader } from './shaders'; // Adjust the import path
 import utilStyles from '../styles/utils.module.css';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
+// import { FirstPersonControls } from 'three/examples/jsm/controls/FirstPersonControls.js';
 
-const ShaderDemo: React.FC = () => {
+const BackgroundSVG: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const camera = useRef<THREE.PerspectiveCamera>();
+  const scene = useRef<THREE.Scene>();
+  const renderer = useRef<THREE.WebGLRenderer>();
+  const stats = useRef<Stats>();
 
   useEffect(() => {
-    let camera: THREE.OrthographicCamera;
-    let scene: THREE.Scene;
-    let renderer: THREE.WebGLRenderer;
-    let uniforms: { [key: string]: { value: number } };
+    let mesh: THREE.Mesh;
+    let geometry: THREE.PlaneGeometry;
+    let material: THREE.MeshBasicMaterial;
+    let clock: THREE.Clock;
+
+    const worldWidth = 128;
+    const worldDepth = 128;
 
     const init = () => {
-      const container = containerRef.current!;
+      camera.current = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 20000);
+      if (camera.current) {
+        camera.current.position.y = 200;
+      }
 
-      camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+      clock = new THREE.Clock();
 
-      scene = new THREE.Scene();
+      scene.current = new THREE.Scene();
+      if (scene.current) {
+        //scene.current.background = new THREE.Color(0xaaccff);
+        //scene.current.fog = new THREE.FogExp2(0xaaccff, 0.0007);
 
-      const geometry = new THREE.PlaneGeometry(2, 2);
+        scene.current.background = new THREE.Color("#0e1a40");
+        scene.current.fog = new THREE.FogExp2("#0e1a40", 0.0003);
+      }
 
-      uniforms = {
-        time: { value: 1.0 },
-      };
+      geometry = new THREE.PlaneGeometry(20000, 20000, worldWidth - 1, worldDepth - 1);
+      if (geometry) {
+        geometry.rotateX(-Math.PI / 2);
 
-      const material = new THREE.ShaderMaterial({
-        uniforms: uniforms,
-        vertexShader: vertexShader,
-        fragmentShader: fragmentShader,
-      });
+        const position = geometry.attributes.position;
 
-      const mesh = new THREE.Mesh(geometry, material);
-      scene.add(mesh);
+        for (let i = 0; i < position.count; i++) {
+          const y = 35 * Math.sin(i / 2);
+          position.setY(i, y);
+        }
 
-      renderer = new THREE.WebGLRenderer();
-      renderer.setPixelRatio(window.devicePixelRatio);
-      renderer.setSize(window.innerWidth, window.innerHeight);
-      container.appendChild(renderer.domElement);
+        const texture = new THREE.TextureLoader().load('water.jpg');
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(5, 5);
+        texture.encoding = THREE.sRGBEncoding;
+
+        material = new THREE.MeshBasicMaterial({ color: 0x0044ff, map: texture });
+
+        mesh = new THREE.Mesh(geometry, material);
+        if (scene.current && mesh) {
+          scene.current.add(mesh);
+        }
+      }
+
+      renderer.current = new THREE.WebGLRenderer({ antialias: true });
+      if (renderer.current) {
+        renderer.current.setPixelRatio(window.devicePixelRatio);
+        renderer.current.setSize(window.innerWidth, window.innerHeight);
+        if (containerRef.current && renderer.current.domElement) {
+          containerRef.current.appendChild(renderer.current.domElement);
+        }
+      }
+
+      // controls = new FirstPersonControls(camera, renderer.domElement);
+      // if (controls) {
+      //   controls.movementSpeed = 500;
+      //   controls.lookSpeed = 0.1;
+      // }
+
+      //stats.current = new Stats();
+      //if (stats.current) {
+      //  document.body.appendChild(stats.current.dom);
+      //}
 
       window.addEventListener('resize', onWindowResize);
     };
 
     const onWindowResize = () => {
-      renderer.setSize(window.innerWidth, window.innerHeight);
+      if (camera.current && renderer.current) {
+        camera.current.aspect = window.innerWidth / window.innerHeight;
+        camera.current.updateProjectionMatrix();
+
+        renderer.current.setSize(window.innerWidth, window.innerHeight);
+
+        // if (controls) {
+        //   controls.handleResize();
+        // }
+      }
     };
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      uniforms['time'].value = performance.now() / 1000;
+      render();
+      if (stats.current) {
+        stats.current.update();
+      }
+    };
 
-      renderer.render(scene, camera);
+    const render = () => {
+      if (clock && geometry && camera.current && renderer.current) {
+        const delta = clock.getDelta();
+        const time = clock.getElapsedTime() * 10;
+
+        const position = geometry.attributes.position;
+
+        for (let i = 0; i < position.count; i++) {
+          const y = 35 * Math.sin(i / 5 + (time + i) / 7);
+          position.setY(i, y);
+        }
+
+        position.needsUpdate = true;
+
+        // if (controls) {
+        //   controls.update(delta);
+        // }
+        if (camera.current && scene.current && renderer.current) {
+          renderer.current.render(scene.current, camera.current);
+        }
+      }
     };
 
     init();
     animate();
 
-    // Clean up on unmount
     return () => {
       window.removeEventListener('resize', onWindowResize);
     };
@@ -66,5 +140,4 @@ const ShaderDemo: React.FC = () => {
   return <div className={utilStyles.backsvg} ref={containerRef} />;
 };
 
-export default ShaderDemo;
-
+export default BackgroundSVG;

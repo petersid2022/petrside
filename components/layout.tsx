@@ -36,7 +36,7 @@ export default function Layout({
                         <div style={{ marginTop: '-25px' }}></div>
                         <Link href={"https://youtu.be/2yfXgu37iyI?t=197"} target="_blank" rel="noopener noreferrer">
                             <Image
-                                priority
+                                priority={true}
                                 src="/images/profile.jpg"
                                 className={utilStyles.borderCircle}
                                 height={300}

@@ -67,6 +67,7 @@
 }
 
 .borderCircle {
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
   border-radius: 8px;
   margin: 0px 0px;
 }
@@ -108,7 +109,10 @@
 
 .introSection {
   padding: 2rem 1.5rem;
+  /*
   background-color: #EAEAEA;
+  */
+  background-color: #fbf8fd; 
   border-radius: 8px;
   /*
   box-shadow: 0px 0px 12px rgba(255, 255, 255, 1);
@@ -120,7 +124,7 @@
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   padding-bottom: 1rem;
-  background-color: #EAEAEA;
+  background-color: #FBF8FD;
   border-radius: 8px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
@@ -128,6 +132,7 @@
 .introText {
   margin: 0px 0px;
   font-size: 1.4rem;
+  line-height: 1.2;
   text-align: justify;
 }
 
@@ -254,7 +259,13 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s, color 0.3s; 
-  color: #a0b9ff;
+  color: #FBF8FD;
+  font-weight: bold;
+}
+
+.iconText:hover {
+  transform: translateX(-10px);
+  color: #b0e0e6;
   font-weight: bold;
 }
 
@@ -262,12 +273,6 @@
   font-weight: lighpaddingt; 
   margin-top: 2px;
   margin-right: 5px;
-}
-
-.iconText:hover {
-  transform: translateX(-10px);
-  color: #a0e9ff;
-  font-weight: bold;
 }
 
 .headingAllPosts {
@@ -290,7 +295,10 @@
   padding: 0px 8px;
   border-radius: 5px;
   width: auto;
+  /*
   background-color: #f0f0f0;
+  */
+  background-color: #fbf8fd;
   text-decoration: none;
   transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -306,7 +314,7 @@
   padding: 0px 8px;
   border-radius: 5px;
   width: auto;
-  background-color: #f0f0f0;
+  background-color: #FBF8FD;
   text-decoration: none;
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
@@ -325,8 +333,8 @@
   height: 100%;
   box-sizing: border-box;
   display: block;
-  background-color: #F0F0F0;
-  background-image: #F0F0F0;
+  background-color: #AACCFF;
+  background-image: #AACCFF;
   z-index: -100;
 }
 
@@ -358,7 +366,6 @@
     text-decoration: none;
   }
   .NameCss {
-    text-shadow: 0 0 10px rgba(140, 140, 140, 1); /* Glow effect */
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: -0.02rem;
@@ -366,7 +373,11 @@
     margin-bottom: 19px;
     margin-left: 0px;
     margin-right: 0px;
-    color: #ccc;
+  text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;
+  /*
+   color: #f0f0f0;
+   */
+    color: #f9f9f9;
   }
   .showlinksBorderContainer {
     display: block;
@@ -423,7 +434,8 @@
     margin-bottom: 7px;
   }
   .borderCircle {
-    border-radius: 4px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 1);
+    border-radius: 8px;
     height: 80%;
     width: 80%;
     margin: 0px auto;
