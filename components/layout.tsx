@@ -26,10 +26,8 @@ export default function Layout({
         <div className={styles.container}>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
-                <meta
-                    name="description"
-                    content="petrside"
-                />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta name="description" content="petrside" />
                 <meta name="og:title" content={siteTitle} />
             </Head>
             <header className={styles.header}>
@@ -38,7 +36,7 @@ export default function Layout({
                         <div style={{ marginTop: '-25px' }}></div>
                         <Link href={"https://youtu.be/2yfXgu37iyI?t=197"} target="_blank" rel="noopener noreferrer">
                             <Image
-                                priority
+                                priority={true}
                                 src="/images/profile.jpg"
                                 className={utilStyles.borderCircle}
                                 height={300}

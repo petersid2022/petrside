@@ -22,12 +22,17 @@ export default function Home({ allPostsData }: HomeProps) {
             </Head>
             <section className={utilStyles.introSection}>
                 <h2 className={utilStyles.headingAbout}>About Me</h2>
+                {/*
                 <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.SoftBorderAroundAbout}>
                     <p className={utilStyles.introText}>
-                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find cool. Thanks for stopping by!
+                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                     </p>
                 </div>
+                */}
+                <p style={{ marginTop:'-1px' }} className={utilStyles.introText}>
+                Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
+                </p>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.showlinksBorderContainer}>
@@ -91,4 +96,3 @@ export async function getStaticProps() {
         },
     };
 }
-

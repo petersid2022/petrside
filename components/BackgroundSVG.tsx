@@ -1,163 +1,143 @@
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
-import React, { useEffect } from 'react';
 import utilStyles from '../styles/utils.module.css';
+import Stats from 'three/examples/jsm/libs/stats.module.js';
+// import { FirstPersonControls } from 'three/examples/jsm/controls/FirstPersonControls.js';
 
 const BackgroundSVG: React.FC = () => {
-    useEffect(() => {
-        const canvas = document.getElementById('webgl-canvas') as HTMLCanvasElement;
+  const containerRef = useRef<HTMLDivElement>(null);
+  const camera = useRef<THREE.PerspectiveCamera>();
+  const scene = useRef<THREE.Scene>();
+  const renderer = useRef<THREE.WebGLRenderer>();
+  const stats = useRef<Stats>();
 
-        // Create a scene, camera, and renderer
-        const scene = new THREE.Scene();
+  useEffect(() => {
+    let mesh: THREE.Mesh;
+    let geometry: THREE.PlaneGeometry;
+    let material: THREE.MeshBasicMaterial;
+    let clock: THREE.Clock;
 
-        // Define the dimensions for the OrthographicCamera
-        const left = -1;
-        const right = 1;
-        const top = 1;
-        const bottom = -1;
-        const near = 0;
-        const far = -1;
+    const worldWidth = 128;
+    const worldDepth = 128;
 
-        // Calculate the aspect ratio based on window dimensions
-        const aspect = window.innerWidth / window.innerHeight;
-
-        const camera = new THREE.OrthographicCamera(
-            left * aspect,
-            right * aspect,
-            top,
-            bottom,
-            near,
-            far
-        );
-
-        const renderer = new THREE.WebGLRenderer({ canvas });
-
-        renderer.setPixelRatio(window.devicePixelRatio);
-        renderer.setClearColor(0x666666);
-        renderer.setSize(window.innerWidth, window.innerHeight);
-
-        // Create a mesh
-        const geometry = new THREE.BufferGeometry();
-        const position = new Float32Array([
-            -1.0, -1.0, 0.0,
-            1.0, -1.0, 0.0,
-            -1.0, 1.0, 0.0,
-            1.0, -1.0, 0.0,
-            -1.0, 1.0, 0.0,
-            1.0, 1.0, 0.0,
-        ]);
-        geometry.setAttribute('position', new THREE.BufferAttribute(position, 3));
-
-        const vertexShader = `
-      attribute vec3 position;
-      void main() {
-        gl_Position = vec4(position, 1.0);
+    const init = () => {
+      camera.current = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 20000);
+      if (camera.current) {
+        camera.current.position.y = 200;
       }
-    `;
 
-        const fragmentShader = `
-      precision highp float;
-      uniform vec2 resolution;
-      uniform float time;
-      uniform float xScale;
-      uniform float yScale;
-      uniform float distortion;
+      clock = new THREE.Clock();
 
-      void main() {
-        vec2 p = (gl_FragCoord.xy * 2.0 - resolution) / min(resolution.x, resolution.y);
-        float d = length(p) * distortion;
+      scene.current = new THREE.Scene();
+      if (scene.current) {
+        //scene.current.background = new THREE.Color(0xaaccff);
+        //scene.current.fog = new THREE.FogExp2(0xaaccff, 0.0007);
 
-        float rx = p.x * (1.0 + d);
-        float gx = p.x;
-        float bx = p.x * (1.0 - d);
-
-        float r = 0.05 / abs(p.y + sin((rx + time) * xScale) * yScale);
-        float g = 0.05 / abs(p.y + sin((gx + time) * xScale) * yScale);
-        float b = 0.05 / abs(p.y + sin((bx + time) * xScale) * yScale);
-
-        gl_FragColor = vec4(r, g, b, 1.0);
+        scene.current.background = new THREE.Color("#0e1a40");
+        scene.current.fog = new THREE.FogExp2("#0e1a40", 0.0003);
       }
-    `;
 
-        const uniforms = {
-            resolution: { type: 'v2', value: new THREE.Vector2(window.innerWidth, window.innerHeight) },
-            time: { type: 'f', value: 0.0 },
-            //xScale: { type: 'f', value: 1.0 },
-            //yScale: { type: 'f', value: 0.5 },
-            //distortion: { type: 'f', value: 0.05 },
-            xScale: { type: 'f', value: 5.0 },
-            yScale: { type: 'f', value: 0.2 },
-            distortion: { type: 'f', value: 0.1 },
-        };
+      geometry = new THREE.PlaneGeometry(20000, 20000, worldWidth - 1, worldDepth - 1);
+      if (geometry) {
+        geometry.rotateX(-Math.PI / 2);
 
-        const material = new THREE.RawShaderMaterial({
-            vertexShader,
-            fragmentShader,
-            uniforms,
-            side: THREE.DoubleSide,
-        });
+        const position = geometry.attributes.position;
 
-        const mesh = new THREE.Mesh(geometry, material);
-        scene.add(mesh);
-
-        // Animation
-        const animate = () => {
-            requestAnimationFrame(animate);
-
-            // Update shader time
-            //uniforms.time.value += 0.01;
-            uniforms.time.value += 0.005;
-
-            renderer.render(scene, camera);
-        };
-
-        // Handle window resize
-        const onResize = () => {
-            const windowWidth = window.innerWidth;
-            const windowHeight = window.innerHeight;
-
-            const newAspect = windowWidth / windowHeight;
-
-            // Update the camera's dimensions based on the new aspect ratio
-            camera.left = left * newAspect;
-            camera.right = right * newAspect;
-            camera.top = top;
-            camera.bottom = bottom;
-
-            camera.updateProjectionMatrix();
-
-            renderer.setSize(windowWidth, windowHeight);
-            uniforms.resolution.value.set(windowWidth, windowHeight);
-        };
-
-        const isDesktop = window.innerWidth >= 768; // Adjust the breakpoint as needed
-
-        if (isDesktop && typeof window !== 'undefined') {
-            // Only attach event listeners and create dat.gui if in the browser environment
-            window.addEventListener('resize', onResize);
-
-            // Start animation loop
-            animate();
-
-            // Optional: Set up GUI controls using dat.gui
-            const dat = require('dat.gui'); // Import dat.gui here
-            const gui = new dat.GUI();
-            gui.closed = true;
-            gui.add(uniforms.xScale, 'value', 1.0, 5.0).name('X Scale');
-            gui.add(uniforms.yScale, 'value', 0.2, 1.0).name('Y Scale');
-            gui.add(uniforms.distortion, 'value', 0.001, 0.1).name('Distortion');
+        for (let i = 0; i < position.count; i++) {
+          const y = 35 * Math.sin(i / 2);
+          position.setY(i, y);
         }
 
-        if (!isDesktop){
-            // Only attach event listeners and create dat.gui if in the browser environment
-            window.addEventListener('resize', onResize);
+        const texture = new THREE.TextureLoader().load('water.jpg');
+        texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+        texture.repeat.set(5, 5);
+        texture.encoding = THREE.sRGBEncoding;
 
-            // Start animation loop
-            animate();
+        material = new THREE.MeshBasicMaterial({ color: 0x0044ff, map: texture });
+
+        mesh = new THREE.Mesh(geometry, material);
+        if (scene.current && mesh) {
+          scene.current.add(mesh);
         }
-    }, []);
+      }
 
-    return <div className={utilStyles.backsvg}><canvas id="webgl-canvas"></canvas></div>;
+      renderer.current = new THREE.WebGLRenderer({ antialias: true });
+      if (renderer.current) {
+        renderer.current.setPixelRatio(window.devicePixelRatio);
+        renderer.current.setSize(window.innerWidth, window.innerHeight);
+        if (containerRef.current && renderer.current.domElement) {
+          containerRef.current.appendChild(renderer.current.domElement);
+        }
+      }
+
+      // controls = new FirstPersonControls(camera, renderer.domElement);
+      // if (controls) {
+      //   controls.movementSpeed = 500;
+      //   controls.lookSpeed = 0.1;
+      // }
+
+      //stats.current = new Stats();
+      //if (stats.current) {
+      //  document.body.appendChild(stats.current.dom);
+      //}
+
+      window.addEventListener('resize', onWindowResize);
+    };
+
+    const onWindowResize = () => {
+      if (camera.current && renderer.current) {
+        camera.current.aspect = window.innerWidth / window.innerHeight;
+        camera.current.updateProjectionMatrix();
+
+        renderer.current.setSize(window.innerWidth, window.innerHeight);
+
+        // if (controls) {
+        //   controls.handleResize();
+        // }
+      }
+    };
+
+    const animate = () => {
+      requestAnimationFrame(animate);
+
+      render();
+      if (stats.current) {
+        stats.current.update();
+      }
+    };
+
+    const render = () => {
+      if (clock && geometry && camera.current && renderer.current) {
+        const delta = clock.getDelta();
+        const time = clock.getElapsedTime() * 10;
+
+        const position = geometry.attributes.position;
+
+        for (let i = 0; i < position.count; i++) {
+          const y = 35 * Math.sin(i / 5 + (time + i) / 7);
+          position.setY(i, y);
+        }
+
+        position.needsUpdate = true;
+
+        // if (controls) {
+        //   controls.update(delta);
+        // }
+        if (camera.current && scene.current && renderer.current) {
+          renderer.current.render(scene.current, camera.current);
+        }
+      }
+    };
+
+    init();
+    animate();
+
+    return () => {
+      window.removeEventListener('resize', onWindowResize);
+    };
+  }, []);
+
+  return <div className={utilStyles.backsvg} ref={containerRef} />;
 };
 
 export default BackgroundSVG;
-
