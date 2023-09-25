@@ -30,8 +30,8 @@ export default function Home({ allPostsData }: HomeProps) {
                     </p>
                 </div>
                 */}
-                <p style={{ marginTop:'-1px' }} className={utilStyles.introText}>
-                Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
+                <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
+                    Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                 </p>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
@@ -51,9 +51,10 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
-                <div style={{ height: '6px', visibility: 'hidden' }}></div>
-                <div style={{ height: '10px', visibility: 'hidden' }}></div>
-                {/*<div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>*/}
+                <div style={{ height: '13px', visibility: 'hidden' }}></div>
+                {/*
+                    <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
+                */}
                 <div style={{ marginTop: '-4.2px' }} className={utilStyles.latestPostContainer}>
                     <h2 style={{ marginTop: '-4px' }} className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
@@ -62,8 +63,7 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                 </div>
                 {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
-                <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
-                <div style={{ height: '6px', visibility: 'hidden' }}></div>
+                <div style={{ height: '8.8px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
                         <Link style={{ textDecoration: 'none' }} href={`/posts/${latestPost.id}`}>

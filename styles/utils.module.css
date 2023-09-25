@@ -46,7 +46,7 @@
 .headingAbout {
   font-size: 2rem;
   margin-bottom: 0px;
-  margin-top: -1.65rem;
+  margin-top: -1.8rem;
 }
 
 .headingLg {
@@ -231,7 +231,6 @@
 }
 
 .showAllLink {
-  margin-top: 2px;
   text-decoration: none;
   color: #282a36;
   font-weight: 500;
@@ -304,7 +303,7 @@
   transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.SoftBorderAroundLatestPost:hover {
+.oftBorderAroundLatestPost:hover {
   transform: scale(1.02); 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
