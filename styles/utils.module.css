@@ -464,13 +464,15 @@
     font-weight: 600;
   }
   .introText {
-    margin: 10px 10px;
-    font-size: 1.4rem;
-    text-align: justify;
-  }
+      margin: 0px 0px;
+  font-size: 1.4rem;
+  line-height: 1.1;
+  text-align: justify;
+}
   .headingAbout {
     font-size: 2rem;
     margin-top: -20px;
+    margin-bottom: 10px;
   }
   .headingLg {
     font-size: 2rem;
