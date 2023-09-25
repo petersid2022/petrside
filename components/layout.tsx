@@ -45,6 +45,7 @@ export default function Layout({
                                 alt={name}
                             />
                         </Link>
+                        <p className={utilStyles.quote}>Of course, the whole point of a Doomsday Machine is lost, if you keep it a secret</p>
                         <h1 className={utilStyles.NameCss}>{name}</h1>
                     </>
                 ) : (
