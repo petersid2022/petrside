@@ -16,10 +16,8 @@ export default function Layout({
     children: React.ReactNode;
     home?: boolean;
 }) {
-    const router = useRouter();
-
     const goBack = () => {
-        router.back();
+        window.history.back();
     };
 
     return (
@@ -54,7 +52,7 @@ export default function Layout({
                 )}
             </header>
             {!home && (
-                <div style={{ marginRight: '50px', marginLeft: '10px', marginBottom: '10px' }}>
+                <div style={{ marginRight: '50px', marginBottom: '10px' }}>
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
                             <span className={utilStyles.iconText}>
