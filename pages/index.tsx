@@ -51,7 +51,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <hr />
-                <div style={{ height: '13px', visibility: 'hidden' }}></div>
+                <div style={{ height: '17px', visibility: 'hidden' }}></div>
                 {/*
                     <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
                 */}
@@ -63,7 +63,7 @@ export default function Home({ allPostsData }: HomeProps) {
                     </Link>
                 </div>
                 {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
-                <div style={{ height: '8.8px', visibility: 'hidden' }}></div>
+                <div style={{ height: '12.8px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
                         <Link style={{ textDecoration: 'none' }} href={`/posts/${latestPost.id}`}>

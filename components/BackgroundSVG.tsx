@@ -30,11 +30,11 @@ const BackgroundSVG: React.FC = () => {
 
       scene.current = new THREE.Scene();
       if (scene.current) {
-        //scene.current.background = new THREE.Color(0xaaccff);
-        //scene.current.fog = new THREE.FogExp2(0xaaccff, 0.0007);
+        scene.current.background = new THREE.Color(0xaaccff);
+        scene.current.fog = new THREE.FogExp2(0xaaccff, 0.0007);
 
-        scene.current.background = new THREE.Color("#0e1a40");
-        scene.current.fog = new THREE.FogExp2("#0e1a40", 0.0003);
+        //scene.current.background = new THREE.Color("#0e1a40");
+        //scene.current.fog = new THREE.FogExp2("#0e1a40", 0.0007);
       }
 
       geometry = new THREE.PlaneGeometry(20000, 20000, worldWidth - 1, worldDepth - 1);
