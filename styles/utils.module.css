@@ -80,7 +80,7 @@
   font-weight: 400;
   font-size: 0.82rem; 
   color: #333; 
-  padding-top: 6px;
+  padding-top: 3px;
   margin-bottom: -6px;
   text-align: center;
 }
@@ -262,15 +262,15 @@
   display: flex;
   align-items: center;
   transition: transform 0.3s, color 0.3s; 
-  color: #FBF8FD;
+  color: #1e2124;
   font-weight: bold;
 }
 
 .iconText:hover {
   transition-delay: 100ms;
   transform: translateX(-10px);
-  color: #b0e0e6;
   font-weight: bold;
+  text-decoration: green wavy underline;
 }
 
 .icon {
@@ -351,15 +351,18 @@
     line-height: 1.6;
     margin-bottom: -10px;
   }
-  .SoftBorderAroundLatestPost {
-    border: 2px dashed #282a36;
-    padding: 10px 16px;
-    border-radius: 5px;
-    width: auto;
-    background-color: #f0f0f0;
-    text-decoration: none;
-    transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
-  }
+.SoftBorderAroundLatestPost {
+  border: 2px dashed #282a36;
+  padding: 0px 8px;
+  border-radius: 5px;
+  width: auto;
+  /*
+  background-color: #f0f0f0;
+  */
+  background-color: #fbf8fd;
+  text-decoration: none;
+  transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
+}
   .SoftBorderAroundAbout {
     border: 2px dashed #282a36;
     padding: 10px 16px;
@@ -371,8 +374,7 @@
   }
   .NameCss {
     font-size: 2.5rem;
-    font-weight: 600;
-    letter-spacing: -0.02rem;
+    font-weight: 700;
     margin-top: 15px;
     margin-bottom: 19px;
     margin-left: 0px;
@@ -469,7 +471,7 @@
     font-weight: 600;
   }
   .introText {
-      margin: 0px 0px;
+  margin: 0px 0px;
   font-size: 1.4rem;
   line-height: 1.1;
   text-align: justify;
@@ -487,4 +489,13 @@
     line-height: 1.4;
     margin: 0px 0px;
   }
+.quote {
+  font-style: italic; 
+  font-weight: 400;
+  font-size: 1rem; 
+  color: #333; 
+  padding-top: 6px;
+  margin-bottom: -6px;
+  text-align: center;
+}
 }
