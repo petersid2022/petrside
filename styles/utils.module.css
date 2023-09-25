@@ -264,6 +264,7 @@
 }
 
 .iconText:hover {
+  transition-delay: 100ms;
   transform: translateX(-10px);
   color: #b0e0e6;
   font-weight: bold;
@@ -303,7 +304,7 @@
   transition: transform 0.1s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.oftBorderAroundLatestPost:hover {
+.SoftBorderAroundLatestPost:hover {
   transform: scale(1.02); 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
 }
