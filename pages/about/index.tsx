@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import ProjectCard from './ProjectCard'; // Adjust the import path as needed
+import ProjectCard from '../../components/ProjectCard'; // Adjust the import path as needed
 
 export default function PostsPage() {
 

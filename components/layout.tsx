@@ -41,7 +41,7 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
-                        <p className={utilStyles.quote}>"Νέος με στάχυ"-Αλέκος Φασιανός</p>
+                        <p className={utilStyles.quote}>"Νέος με στάχυ" Αλέκος Φασιανός</p>
                         <h1 className={utilStyles.NameCss}>Petros Sideris</h1>
                     </>
                 ) : (

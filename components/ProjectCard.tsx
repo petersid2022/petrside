@@ -1,7 +1,7 @@
 // ProjectCard.tsx
 import React from 'react';
 import Link from 'next/link';
-import utilStyles from '../../styles/utils.module.css';
+import utilStyles from '../styles/utils.module.css';
 
 interface ProjectCardProps {
     title: string;
