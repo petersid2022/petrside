@@ -32,19 +32,17 @@ export default function Layout({
                 {home ? (
                     <>
                         <div style={{ marginTop: '-25px' }}></div>
-                        <Link href={"https://youtu.be/2yfXgu37iyI?t=197"} target="_blank" rel="noopener noreferrer">
-                            <Image
-                                priority={true}
-                                src="/images/profile.jpg"
-                                className={utilStyles.borderCircle}
-                                height={300}
-                                width={300}
-                                quality={100}
-                                alt={name}
-                            />
-                        </Link>
-                        <p className={utilStyles.quote}>The whole point of a Doomsday Machine is lost, if you keep it a secret.</p>
-                        <h1 className={utilStyles.NameCss}>{name}</h1>
+                        <Image
+                            priority={true}
+                            src="/images/profile.jpg"
+                            className={utilStyles.borderCircle}
+                            height={200}
+                            width={200}
+                            quality={100}
+                            alt={name}
+                        />
+                        <p className={utilStyles.quote}>"Νέος με στάχυ"-Αλέκος Φασιανός</p>
+                        <h1 className={utilStyles.NameCss}>Petros Sideris</h1>
                     </>
                 ) : (
                     <>

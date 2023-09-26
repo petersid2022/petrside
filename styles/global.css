@@ -20,6 +20,7 @@ html,body {
   line-height: 1.6;
   font-size: 18px;
   z-index: 5;
+  background-color: #c8d9f5;
 }
 
 * {

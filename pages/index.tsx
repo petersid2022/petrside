@@ -21,7 +21,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.introSection}>
-                <h2 className={utilStyles.headingAbout}>About Me</h2>
+                <h2 className={utilStyles.headingAbout}>About</h2>
                 {/*
                 <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.SoftBorderAroundAbout}>
@@ -36,16 +36,20 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.showlinksBorderContainer}>
+                    <Link href="/about">
+                        <span className={utilStyles.showlinksBorder}>About Me</span>
+                    </Link>
+                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
+                    <Link href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                        <span className={utilStyles.showlinksBorder}>Resume</span>
+                    </Link>
+                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
                     <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
                         <span className={utilStyles.showlinksBorder}>GitHub</span>
                     </Link>
                     <div style={{ width: '15px', visibility: 'hidden' }}></div>
                     <Link href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
                         <span className={utilStyles.showlinksBorder}>LinkedIn</span>
-                    </Link>
-                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
-                    <Link href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                        <span className={utilStyles.showlinksBorder}>Resume</span>
                     </Link>
                 </div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
