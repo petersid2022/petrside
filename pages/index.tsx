@@ -22,14 +22,6 @@ export default function Home({ allPostsData }: HomeProps) {
             </Head>
             <section className={utilStyles.introSection}>
                 <h2 className={utilStyles.headingAbout}>About</h2>
-                {/*
-                <div style={{ height: '7.8px', visibility: 'hidden' }}></div>
-                <div className={utilStyles.SoftBorderAroundAbout}>
-                    <p className={utilStyles.introText}>
-                        Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
-                    </p>
-                </div>
-                */}
                 <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
                     Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                 </p>
@@ -54,19 +46,17 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
-                <hr />
-                <div style={{ height: '17px', visibility: 'hidden' }}></div>
                 {/*
-                    <div style={{marginTop:'-2.2px'}} className={utilStyles.latestPostContainer}>
+                <hr />
                 */}
+                <hr style={{ borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
+                <div style={{ height: '17px', visibility: 'hidden' }}></div>
                 <div style={{ marginTop: '-4.2px' }} className={utilStyles.latestPostContainer}>
                     <h2 style={{ marginTop: '-4px' }} className={utilStyles.headingLg}>Latest Blog Post</h2>
                     <Link href="/posts">
                         <span className={utilStyles.showAllLink}>Show All</span>
-                        {/*<span style={{marginTop:'10px'}} className={utilStyles.showAllLink}>Show All</span>*/}
                     </Link>
                 </div>
-                {/*<div style={{ height: '7.8px', visibility: 'hidden' }}></div>*/}
                 <div style={{ height: '12.8px', visibility: 'hidden' }}></div>
                 <ul className={utilStyles.postList}>
                     <li className={utilStyles.postItem} key={latestPost.id}>
