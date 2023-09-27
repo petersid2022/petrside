@@ -48,7 +48,7 @@ export default function PostsPage() {
                     embedded systems and low-level programming.
                     <br />
                     My particular enthusiasm right now lies in exploring the potential of utilising Zig and Rust on embedded single board computers
-                    (SBCs). I'm eager to dive into the world of hardware and firmware development, leveraging my
+                    (SBCs), like the Raspberry Pi. I'm eager to dive into the world of hardware and firmware development, leveraging my
                     skills to create efficient and reliable solutions.
                 </h1>
                 <hr style={{marginTop:'10px', borderColor:'#ccc', borderWidth:'2px', borderStyle:'dashed'}} />

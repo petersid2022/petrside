@@ -32,7 +32,7 @@ export default function Home({ allPostsData }: HomeProps) {
                         <span className={utilStyles.showlinksBorder}>About Me</span>
                     </Link>
                     <div style={{ width: '15px', visibility: 'hidden' }}></div>
-                    <Link href="https://drive.google.com/file/d/1wLu2UU0h6ivmWHjhv0evWRhyXU9gkHiK/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                         <span className={utilStyles.showlinksBorder}>Resume</span>
                     </Link>
                     <div style={{ width: '15px', visibility: 'hidden' }}></div>
