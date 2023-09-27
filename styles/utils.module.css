@@ -330,7 +330,7 @@
 
 .SoftBorderAroundLatestPost {
     padding: 0px 8px;
-    border: 2px dashed #282a36;
+    border: 1px solid #282a36;
     border-radius: 5px;
     width: auto;
     /*
@@ -358,7 +358,7 @@
 
 .SoftBorderAroundAllPost {
     margin-bottom: 10px;
-    border: 2px dashed #282a36;
+    border: 1px solid #282a36;
     padding: 0px 8px;
     border-radius: 5px;
     width: auto;
@@ -397,7 +397,7 @@
     }
 
     .SoftBorderAroundLatestPost {
-        border: 2px dashed #282a36;
+        border: 1px solid #282a36;
         padding: 0px 8px;
         border-radius: 5px;
         width: auto;
@@ -489,7 +489,7 @@
 
     .showAllLink:focus {
         outline: none;
-    }
+        }
 
     .lightText {
         color: #666;
