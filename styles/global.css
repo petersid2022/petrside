@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Custom styles for code blocks */
+pre {
+  padding: 10px;
+  margin: 8px 0px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+}
+
 html,body {
   padding: 0;
   margin: 0;
@@ -97,7 +105,12 @@ hr {
   a:hover {
     text-decoration: underline;
   }
-  
+
+  img {
+    max-width: 40%;
+    display: block;
+  }
+
   hr {
     border-color: #282a36; /* Change the line color */
     border-width: 2px; /* Adjust the line thickness */

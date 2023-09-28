@@ -32,7 +32,7 @@ export default function Post({
                             <span style={{ marginLeft: '0px', marginRight: '5px', fontSize: '20px' }}><AiOutlineCalendar /></span>
                             <Date dateString={postData.date} />
                             <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
-                            <span style={{ marginLeft: '2px', marginRight: '5px', fontSize: '20px' }}><AiOutlineRead /></span>
+                            <span style={{ marginLeft: '2px', marginRight: '5px', fontSize: '22px' }}><AiOutlineRead /></span>
                             <span>
                                 <WordCount input={postData.contentHtml} /> min read
                             </span>
