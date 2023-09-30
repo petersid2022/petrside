@@ -9,9 +9,10 @@
 }
 
 .NameCss {
+    color: #f0c75e;
     font-size: 2.5rem;
     letter-spacing: -0.07rem;
-    font-weight: 700;
+    font-weight: 800;
     margin-top: 0px;
     margin-bottom: 5px;
     margin-left: 0px;
@@ -23,10 +24,10 @@
 
 .projectCard {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 2px solid #141d26;
 }
 
 .projectCard h2 {
@@ -92,6 +93,7 @@
 
 .borderCircle {
     margin: 0px 0px;
+    border-radius: 999999px;
 }
 
 .quote {
@@ -137,7 +139,6 @@
     */
     background-color: #fbf8fd;
     border-radius: 8px;
-    outline: 1px solid #000
     /*
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
     */
@@ -177,10 +178,10 @@
 .showlinksBorder {
     font-weight: 500;
     font-size: 25px;
-    border: 2px solid #282a36;
+    border: 2px solid #141d26;
     padding: 0px 8px;
     border-radius: 5px;
-    transition: background-color 0.1s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.1s, color 0.1s, border-color 0.1s;
     text-align: center;
     width: auto;
     background-color: transparent;
@@ -191,8 +192,8 @@
 
 .showlinksBorder:hover {
     color: #fff;
-    background-color: #282a36;
-    border-color: #282a36;
+    background-color: #141d26;
+    border-color: #141d26;
 }
 
 .showlinksBorder:focus {
@@ -312,8 +313,8 @@
 
 .showAllLink:hover {
     color: #fff;
-    background-color: #282a36;
-    border-color: #282a36;
+    background-color: #141d26;
+    border-color: #141d26;
 }
 
 .showAllLink:focus {
@@ -323,12 +324,15 @@
 .iconText {
     display: flex;
     align-items: center;
+    /*
     color: #1e2124;
+    */
+    color: #fff;
     font-weight: bold;
     border: 2px solid transparent;
     padding: 0px 8px;
     transition-delay: 100ms;
-    transition: background-color 0.1s, color 0.3s, border-color 0.3s;
+    transition: background-color 0.1s, color 0.1s, border-color 0.1s;
     border-radius: 5px;
     text-align: center;
     width: auto;
@@ -336,8 +340,8 @@
 
 .iconText:hover {
     color: #fff;
-    background-color: #282a36;
-    border-color: #282a36;
+    background-color: #243447;
+    border-color: #243447;
 }
 
 .iconText:focus {
@@ -367,7 +371,7 @@
 
 .SoftBorderAroundLatestPost {
     padding: 0px 8px;
-    border: 1px solid #282a36;
+    border: 2px solid #282a36;
     border-radius: 5px;
     width: auto;
     /*
@@ -457,8 +461,10 @@
     }
 
     .NameCss {
+        color: #f0c75e;
+        letter-spacing: -0.07rem;
         font-size: 2.5rem;
-        font-weight: 700;
+        font-weight: 800;
         margin-top: 15px;
         margin-bottom: 19px;
         margin-left: 0px;
@@ -535,6 +541,7 @@
     }
 
     .borderCircle {
+        border-radius: 999999px;
         height: 50%;
         width: 50%;
         margin: 0px auto;

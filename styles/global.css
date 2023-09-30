@@ -4,6 +4,7 @@
 
 /* Custom styles for code blocks */
 pre {
+  width: auto;
   padding: 10px;
   margin: 8px 0px;
   background-color: #f4f4f4;
@@ -28,7 +29,7 @@ html,body {
   line-height: 1.6;
   font-size: 18px;
   z-index: 5;
-  background-color: #c8d9f5;
+  background-color: #141d26;
 }
 
 * {
@@ -91,6 +92,7 @@ hr {
       sans-serif;
     line-height: 1;
     font-size: 14px;
+    background-color: #141d26;
   }
 
   * {

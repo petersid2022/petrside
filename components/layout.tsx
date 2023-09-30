@@ -3,8 +3,9 @@ import Image from 'next/image';
 import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { TiArrowBack } from 'react-icons/ti';
+import { useRouter } from 'next/router'
 
-const name = 'Peter Sideris';
+//const name = 'Peter Sideris';
 export const siteTitle = 'petrside';
 
 export default function Layout({
@@ -14,8 +15,11 @@ export default function Layout({
     children: React.ReactNode;
     home?: boolean;
 }) {
+
+    const router = useRouter()
+
     const goBack = () => {
-        window.history.back();
+        router.back()
     };
 
     return (
