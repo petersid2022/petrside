@@ -5,7 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import { TiArrowBack } from 'react-icons/ti';
 import { useRouter } from 'next/router'
 
-//const name = 'Peter Sideris';
+const name = 'Petros Sideris';
 export const siteTitle = 'petrside';
 
 export default function Layout({
@@ -40,9 +40,9 @@ export default function Layout({
                             height={200}
                             width={200}
                             quality={100}
-                            alt="Alekos Fassianos"
+                            alt={name}
                         />
-                        <h1 className={utilStyles.NameCss}>Petros Sideris</h1>
+                        <h1 className={utilStyles.NameCss}>{name}</h1>
                     </>
                 ) : (
                     <>
