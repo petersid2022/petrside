@@ -6,7 +6,7 @@ import { TiArrowBack } from 'react-icons/ti';
 import { useRouter } from 'next/router'
 
 const name = 'Petros Sideris';
-export const siteTitle = 'petrside';
+export const siteTitle = 'Peter Sideris';
 
 export default function Layout({
     children,

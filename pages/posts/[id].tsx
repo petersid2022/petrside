@@ -26,9 +26,9 @@ export default function Post({
             </Head>
             <section className={utilStyles.introSection}>
                 <article>
-                    <h1 style={{ marginTop: '-22px' }} className={utilStyles.headingPostTitle}>{postData.title}</h1>
-                    <div style={{ marginTop: '4px', marginBottom: '4px' }} className={utilStyles.lightText}>
-                        <div style={{ display: 'flex', alignItems: 'center' }}>
+                    <h1 style={{ marginTop: '-20px' }} className={utilStyles.headingPostTitle}>{postData.title}</h1>
+                    <div style={{ marginTop: '8px', marginBottom: '4px' }} className={utilStyles.lightText}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
                             <span style={{ marginLeft: '0px', marginRight: '5px', fontSize: '20px' }}><AiOutlineCalendar /></span>
                             <Date dateString={postData.date} />
                             <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>

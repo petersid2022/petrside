@@ -35,7 +35,7 @@ export default function PostsPage() {
             </Head>
             <section className={utilStyles.introSectionAllPosts}>
                 <div className={utilStyles.headingAllPosts}>
-                    <h1 style={{ marginTop: '-5px' }} className={utilStyles.headingPostTitle}>About Me</h1>
+                    <h1 style={{ marginTop: '-10px', marginBottom: '3px' }} className={utilStyles.headingPostTitle}>About Me</h1>
                 </div>
                 <h1 style={{textAlign:'left'}} className={utilStyles.content}>
                     My name is Peter Sideris and I'm an Electrical Engineering student from Greece.

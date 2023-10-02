@@ -23,9 +23,9 @@ export default function Home({ allPostsData }: HomeProps) {
             <section className={utilStyles.introSection}>
                 <h2 className={utilStyles.headingAbout}>About</h2>
                 <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
-                    Welcome to my blog! I'm Peter Sideris, an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
+                    Welcome to my blog! I'm Peter Sideris (petrside), an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                 </p>
-                <div style={{ height: '10px', visibility: 'hidden' }}></div>
+                <div style={{ height: '5px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div className={utilStyles.showlinksBorderContainer}>
                     <Link href="/about">
