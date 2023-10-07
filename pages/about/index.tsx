@@ -18,6 +18,11 @@ export default function PostsPage() {
             url:'https://github.com/petersid2022/chip8',
         },
         {
+            title: 'skroutz-prosfores-scraper-go',
+            description: 'CLI based web scraper written in Go, that looks for any deals on skroutz.gr',
+            url:'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
+        },
+        {
             title: 'RackJS',
             description: 'A powerful webapp designed for kitchen professionals in order to manage their kitchen inventory',
             url:'https://github.com/petersid2022/rackjs',
