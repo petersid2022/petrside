@@ -24,7 +24,7 @@ export default function Post({
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <section className={utilStyles.introSection}>
+            <section className={utilStyles.PostSection}>
                 <article>
                     <h1 style={{ marginTop: '-20px' }} className={utilStyles.headingPostTitleId}>{postData.title}</h1>
                     <div style={{ marginTop: '8px', marginBottom: '4px' }} className={utilStyles.lightText}>

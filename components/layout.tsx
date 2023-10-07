@@ -4,8 +4,9 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { TiArrowBack } from 'react-icons/ti';
 import { useRouter } from 'next/router'
+import { useDarkMode } from '../components/DarkModeProvider';
 
-const name = 'Petros Sideris';
+const name = 'Peter Sideris';
 export const siteTitle = 'Peter Sideris';
 
 export default function Layout({
@@ -15,8 +16,8 @@ export default function Layout({
     children: React.ReactNode;
     home?: boolean;
 }) {
-
     const router = useRouter()
+    const { isDarkMode } = useDarkMode();
 
     const goBack = () => {
         router.back()
@@ -32,7 +33,7 @@ export default function Layout({
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <div style={{ marginTop: '-25px' }}></div>
+                        <div style={{ marginTop: '12px' }}></div>
                         <Image
                             priority={true}
                             src="/images/profile.jpg"
@@ -42,7 +43,11 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
-                        <h1 className={utilStyles.NameCss}>{name}</h1>
+                        {isDarkMode ?
+                            <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
+                            :
+                            <h1 style={{ margin: '10px 0px', color: '#fbf8fd' }} className={utilStyles.NameCss}>{name}</h1>
+                        }
                     </>
                 ) : (
                     <>
@@ -53,10 +58,21 @@ export default function Layout({
                 <div style={{ marginRight: '50px', marginBottom: '10px' }}>
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
-                            <span className={utilStyles.iconText}>
-                                <TiArrowBack className={utilStyles.icon} />
-                                Go Back
-                            </span>
+                            {isDarkMode ?
+                                <span style={{
+                                    color: '#141d26', // Text color in dark mode
+                                }} className={utilStyles.iconText}>
+                                    <TiArrowBack className={utilStyles.icon} />
+                                    Go Back
+                                </span>
+                                :
+                                <span style={{
+                                    color: '#fff', // Text color in dark mode
+                                }} className={utilStyles.iconText}>
+                                    <TiArrowBack className={utilStyles.icon} />
+                                    Go Back
+                                </span>
+                            }
                         </button>
                     </div>
                 </div>

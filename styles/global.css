@@ -32,6 +32,14 @@ html,body {
   background-color: #141d26;
 }
 
+html.dark-mode {
+  background-color: #ccc;
+}
+
+body.dark-mode {
+  background-color: #ccc;
+}
+
 * {
   box-sizing: border-box;
 }

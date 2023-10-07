@@ -4,6 +4,10 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import { useDarkMode } from '../components/DarkModeProvider';
+import { BsFillMoonStarsFill } from 'react-icons/bs';
+import { BsFillSunFill } from 'react-icons/bs';
+import React, { useEffect } from 'react';
 
 interface HomeProps {
     allPostsData: {
@@ -15,13 +19,30 @@ interface HomeProps {
 
 export default function Home({ allPostsData }: HomeProps) {
     const latestPost = allPostsData[0];
+    const { isDarkMode, toggleDarkMode } = useDarkMode();
+
+    useEffect(() => {
+        if (isDarkMode) {
+            document.documentElement.classList.add('dark-mode');
+            document.body.classList.add('dark-mode');
+        } else {
+            document.documentElement.classList.remove('dark-mode');
+            document.body.classList.remove('dark-mode');
+        }
+    }, [isDarkMode]);
+
     return (
         <Layout home>
             <Head>
                 <title>{siteTitle}</title>
             </Head>
             <section className={utilStyles.introSection}>
-                <h2 className={utilStyles.headingAbout}>About</h2>
+                <div className={utilStyles.latestPostContainer}>
+                    <h2 className={utilStyles.headingAbout}>About</h2>
+                    <button style={{ fontSize: '25px', marginTop: '-30px' }} onClick={toggleDarkMode}>
+                        {isDarkMode ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
+                    </button>
+                </div>
                 <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
                     Welcome to my blog! I'm Peter Sideris (petrside), an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                 </p>
@@ -71,13 +92,24 @@ export default function Home({ allPostsData }: HomeProps) {
                     </li>
                 </ul>
                 <div style={{ height: '7px', visibility: 'hidden' }}></div>
-                <footer className={utilStyles.footer}>
-                    <p>© Peter Sideris. All rights and lefts reserved.</p>
-                    <Link style={{ display: 'inline-block', color: '#666' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
-                        <p>Made with ❤️ using Next.js</p>
-                    </Link>
-                </footer>
             </section>
+            <footer className={utilStyles.footer}>
+                {isDarkMode ?
+                    <div>
+                        <p style={{ color: '#000' }}>© Peter Sideris. All rights and lefts reserved.</p>
+                        <Link style={{ display: 'inline-block', color: '#000' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                            <p>Made with ❤️ using Next.js</p>
+                        </Link>
+                    </div>
+                    :
+                    <div>
+                        <p style={{ color: '#f0f0f0' }}>© Peter Sideris. All rights and lefts reserved.</p>
+                        <Link style={{ display: 'inline-block', color: '#f0f0f0' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                            <p>Made with ❤️ using Next.js</p>
+                        </Link>
+                    </div>
+                }
+            </footer>
         </Layout>
     );
 }
@@ -90,3 +122,5 @@ export async function getStaticProps() {
         },
     };
 }
+
+
