@@ -44,9 +44,9 @@ export default function Layout({
                             alt={name}
                         />
                         {isDarkMode ?
-                            <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
-                            :
                             <h1 style={{ margin: '10px 0px', color: '#fbf8fd' }} className={utilStyles.NameCss}>{name}</h1>
+                            :
+                            <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
                         }
                     </>
                 ) : (
@@ -59,14 +59,14 @@ export default function Layout({
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
                             {isDarkMode ?
-                                <span className={utilStyles.iconTextLight}>
+                                <span style={{
+                                    color: '#fff',
+                                }} className={utilStyles.iconText}>
                                     <TiArrowBack className={utilStyles.icon} />
                                     Go Back
                                 </span>
                                 :
-                                <span style={{
-                                    color: '#fff', 
-                                }} className={utilStyles.iconText}>
+                                <span className={utilStyles.iconTextLight}>
                                     <TiArrowBack className={utilStyles.icon} />
                                     Go Back
                                 </span>

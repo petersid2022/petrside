@@ -86,7 +86,7 @@ export default function Home({ allPostsData }: HomeProps) {
                         <Link style={{ textDecoration: 'none' }} href={`/posts/${latestPost.id}`}>
                             <div className={utilStyles.SoftBorderAroundLatestPost}>
                                 <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{latestPost.title}</h1>
-                                <div style={{display:'flex', alignItems:'center'}} className={utilStyles.lightText}>
+                                <div style={{ display: 'flex', alignItems: 'center' }} className={utilStyles.lightText}>
                                     <Date dateString={latestPost.date} />
                                     <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
                                     <span>
@@ -102,15 +102,15 @@ export default function Home({ allPostsData }: HomeProps) {
             <footer className={utilStyles.footer}>
                 {isDarkMode ?
                     <div>
-                        <p style={{ color: '#000' }}>© Peter Sideris. All rights and lefts reserved.</p>
-                        <Link style={{ display: 'inline-block', color: '#000' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                        <p style={{ color: '#f0f0f0' }}>© Peter Sideris. All rights and lefts reserved.</p>
+                        <Link style={{ display: 'inline-block', color: '#f0f0f0' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                             <p>Made with ❤️ using Next.js</p>
                         </Link>
                     </div>
                     :
                     <div>
-                        <p style={{ color: '#f0f0f0' }}>© Peter Sideris. All rights and lefts reserved.</p>
-                        <Link style={{ display: 'inline-block', color: '#f0f0f0' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
+                        <p style={{ color: '#000' }}>© Peter Sideris. All rights and lefts reserved.</p>
+                        <Link style={{ display: 'inline-block', color: '#000' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                             <p>Made with ❤️ using Next.js</p>
                         </Link>
                     </div>

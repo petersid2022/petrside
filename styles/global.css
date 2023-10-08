@@ -29,15 +29,15 @@ html,body {
   line-height: 1.6;
   font-size: 18px;
   z-index: 5;
-  background-color: #141d26;
+  background-color: #ccc;
 }
 
 html.dark-mode {
-  background-color: #ccc;
+  background-color: #141d26;
 }
 
 body.dark-mode {
-  background-color: #ccc;
+  background-color: #141d26;
 }
 
 * {
