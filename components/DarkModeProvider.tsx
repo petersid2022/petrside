@@ -21,7 +21,7 @@ interface DarkModeProviderProps {
 }
 
 export const DarkModeProvider: React.FC<DarkModeProviderProps> = ({ children }) => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
     useEffect(() => {
         const darkModeCookie = cookie.get('darkMode');
         if (darkModeCookie === '1') {

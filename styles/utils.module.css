@@ -26,6 +26,7 @@
 .projectCard {
   width: auto;
   padding: 0px 10px;
+  overflow-wrap: break-word;
 }
 
 .projectCard h2 {
