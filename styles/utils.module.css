@@ -18,20 +18,25 @@
   margin-right: 0px;
 }
 
+.projectsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .projectCard {
+  width: auto;
   padding: 0px 10px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 2px solid #141d26;
 }
 
 .projectCard h2 {
   font-size: 1.5rem;
+  overflow-wrap: break-word;
   margin-bottom: 0.5rem;
 }
 
 .projectCard p {
   font-size: 1rem;
+  overflow-wrap: break-word;
   color: #333;
 }
 
@@ -343,6 +348,29 @@
   outline: none;
 }
 
+.iconTextLight {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border: 2px solid transparent;
+  padding: 0px 8px;
+  transition-delay: 100ms;
+  transition: background-color 0.05s, color 0.05s, border-color 0.05s;
+  border-radius: 5px;
+  text-align: center;
+  width: auto;
+  color: #211a1a;
+}
+
+.iconTextLight:hover {
+  background-color: #b297a4;
+  border-color: #b297a4;
+}
+
+.iconTextLight:focus {
+  outline: none;
+}
+
 .iconText {
   display: flex;
   align-items: center;
@@ -388,7 +416,7 @@
 .SoftBorderAroundLatestPost {
   padding: 0px 8px;
   border: 2px solid #ccc;
-  border-radius: 8px;
+  border-radius: 5px;
   width: auto;
   background-color: #fbf8fd;
   text-decoration: none;
@@ -401,7 +429,12 @@
 }
 
 .ProjectsBox {
+  flex-grow: 1;
+  justify-content: center;
   text-decoration: none;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  margin: 0px 2px 4px 2px;
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 

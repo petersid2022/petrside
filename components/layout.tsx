@@ -59,15 +59,13 @@ export default function Layout({
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
                             {isDarkMode ?
-                                <span style={{
-                                    color: '#141d26', // Text color in dark mode
-                                }} className={utilStyles.iconText}>
+                                <span className={utilStyles.iconTextLight}>
                                     <TiArrowBack className={utilStyles.icon} />
                                     Go Back
                                 </span>
                                 :
                                 <span style={{
-                                    color: '#fff', // Text color in dark mode
+                                    color: '#fff', 
                                 }} className={utilStyles.iconText}>
                                     <TiArrowBack className={utilStyles.icon} />
                                     Go Back

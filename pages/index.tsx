@@ -4,9 +4,11 @@ import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
 import Link from 'next/link';
 import Date from '../components/date';
+import WordCount from '../components/wordcount';
 import { useDarkMode } from '../components/DarkModeProvider';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { BsFillSunFill } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
 import React, { useEffect } from 'react';
 
 interface HomeProps {
@@ -84,8 +86,12 @@ export default function Home({ allPostsData }: HomeProps) {
                         <Link style={{ textDecoration: 'none' }} href={`/posts/${latestPost.id}`}>
                             <div className={utilStyles.SoftBorderAroundLatestPost}>
                                 <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{latestPost.title}</h1>
-                                <div className={utilStyles.lightText}>
+                                <div style={{display:'flex', alignItems:'center'}} className={utilStyles.lightText}>
                                     <Date dateString={latestPost.date} />
+                                    <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
+                                    <span>
+                                        <WordCount input={latestPost.id} /> min read
+                                    </span>
                                 </div>
                             </div>
                         </Link>

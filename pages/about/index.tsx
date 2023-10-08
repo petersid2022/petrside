@@ -10,27 +10,27 @@ export default function PostsPage() {
         {
             title: 'greek_stemmer',
             description: 'Greek Stemmer Library written in Go',
-            url:'https://github.com/petersid2022/greek_stemmer',
+            url: 'https://github.com/petersid2022/greek_stemmer',
         },
         {
             title: 'Chip-8 Emulator',
             description: 'An emulator for the Chip8 virtual machine written in Go',
-            url:'https://github.com/petersid2022/chip8',
+            url: 'https://github.com/petersid2022/chip8',
         },
         {
             title: 'skroutz-prosfores-scraper-go',
             description: 'CLI based web scraper written in Go, that looks for any deals on skroutz.gr',
-            url:'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
+            url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
         {
             title: 'RackJS',
             description: 'A powerful webapp designed for kitchen professionals in order to manage their kitchen inventory',
-            url:'https://github.com/petersid2022/rackjs',
+            url: 'https://github.com/petersid2022/rackjs',
         },
         {
             title: 'petrside.gr',
             description: 'Personal website/blogspot for me, built using Next.js and modern technologies',
-            url:'https://github.com/petersid2022/petrside',
+            url: 'https://github.com/petersid2022/petrside',
         },
     ];
     return (
@@ -42,7 +42,7 @@ export default function PostsPage() {
                 <div className={utilStyles.headingAllPosts}>
                     <h1 style={{ marginTop: '-10px', marginBottom: '3px' }} className={utilStyles.headingPostTitle}>About Me</h1>
                 </div>
-                <h1 style={{textAlign:'left'}} className={utilStyles.content}>
+                <h1 style={{ textAlign: 'left' }} className={utilStyles.content}>
                     My name is Peter Sideris and I'm an Electrical Engineering student from Greece.
                     I am extremely thrilled to be working in the field of
                     engineering, particularly with new and cutting-edge technologies in both hardware and software
@@ -56,11 +56,11 @@ export default function PostsPage() {
                     (SBCs), like the Raspberry Pi. I'm eager to dive into the world of hardware and firmware development, leveraging my
                     skills to create efficient and reliable solutions.
                 </h1>
-                <hr style={{marginTop:'10px', borderColor:'#ccc', borderWidth:'2px', borderStyle:'dashed'}} />
+                <hr style={{ marginTop: '10px', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
                 <h1 className={utilStyles.headingProjects}>Notable Projects</h1>
                 <div className={utilStyles.projectsContainer}>
                     {notableProjects.map((project, index) => (
-                        <ProjectCard key={index} title={project.title} description={project.description} url={project.url}/>
+                        <ProjectCard key={index} title={project.title} description={project.description} url={project.url} />
                     ))}
                 </div>
             </section>

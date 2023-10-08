@@ -7,7 +7,7 @@ export default function App({ Component, pageProps }: AppProps) {
     return (
         <>
             <DarkModeProvider>
-                <Component {...pageProps} />;
+                <Component {...pageProps} />
                 <Analytics />
             </DarkModeProvider>
         </>
