@@ -100,6 +100,15 @@ hr {
       sans-serif;
     line-height: 1;
     font-size: 14px;
+    background-color: #ccc;
+  
+  }
+  
+  html.dark-mode {
+    background-color: #141d26;
+  }
+  
+  body.dark-mode {
     background-color: #141d26;
   }
 

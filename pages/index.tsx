@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React, { useEffect } from 'react';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import { getSortedPostsData } from '../lib/posts';
@@ -6,16 +7,19 @@ import Link from 'next/link';
 import Date from '../components/date';
 import WordCount from '../components/wordcount';
 import { useDarkMode } from '../components/DarkModeProvider';
-import { BsFillMoonStarsFill } from 'react-icons/bs';
-import { BsFillSunFill } from 'react-icons/bs';
+import { getPostData } from '../lib/posts';
+import { BsMoon } from 'react-icons/bs';
+import { BsSun } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
-import React, { useEffect } from 'react';
+import { BsCalendar2Date } from 'react-icons/bs';
+import { BsClockHistory } from 'react-icons/bs';
 
 interface HomeProps {
     allPostsData: {
         id: string;
         date: string;
         title: string;
+        contentHtml: string;
     }[];
 }
 
@@ -42,7 +46,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingAbout}>About</h2>
                     <button style={{ fontSize: '25px', marginTop: '-30px' }} onClick={toggleDarkMode}>
-                        {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
+                        {isDarkMode ? <BsSun /> : <BsMoon />}
                     </button>
                 </div>
                 <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
@@ -69,9 +73,6 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
                 <div style={{ height: '10px', visibility: 'hidden' }}></div>
-                {/*
-                <hr />
-                */}
                 <hr style={{ borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
                 <div style={{ height: '17px', visibility: 'hidden' }}></div>
                 <div style={{ marginTop: '-4.2px' }} className={utilStyles.latestPostContainer}>
@@ -87,10 +88,12 @@ export default function Home({ allPostsData }: HomeProps) {
                             <div className={utilStyles.SoftBorderAroundLatestPost}>
                                 <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{latestPost.title}</h1>
                                 <div style={{ display: 'flex', alignItems: 'center' }} className={utilStyles.lightText}>
+                                    <span style={{ marginRight: '4px', fontSize: '16px' }}><BsCalendar2Date /></span>
                                     <Date dateString={latestPost.date} />
                                     <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
+                                    <span style={{ marginRight: '4px', fontSize: '16px' }}><BsClockHistory /></span>
                                     <span>
-                                        <WordCount input={latestPost.id} /> min read
+                                        <WordCount input={latestPost.contentHtml} /> min read
                                     </span>
                                 </div>
                             </div>
@@ -121,12 +124,20 @@ export default function Home({ allPostsData }: HomeProps) {
 }
 
 export async function getStaticProps() {
-    const allPostsData = getSortedPostsData();
+    const sortedPosts = getSortedPostsData();
+    const allPostsData = await Promise.all(
+        sortedPosts.map(async (post) => {
+            const postData = await getPostData(post.id);
+            return {
+                ...post,
+                contentHtml: postData.contentHtml,
+            };
+        })
+    );
+
     return {
         props: {
             allPostsData,
         },
     };
 }
-
-

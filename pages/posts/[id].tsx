@@ -6,8 +6,10 @@ import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { RxDotFilled } from 'react-icons/rx';
-import { AiOutlineRead } from 'react-icons/ai';
-import { AiOutlineCalendar } from 'react-icons/ai';
+//import { AiOutlineRead } from 'react-icons/ai';
+//import { AiOutlineCalendar } from 'react-icons/ai';
+import { BsCalendar2Date } from 'react-icons/bs';
+import { BsClockHistory } from 'react-icons/bs';
 
 export default function Post({
     postData,
@@ -29,10 +31,10 @@ export default function Post({
                     <h1 style={{ marginTop: '-20px' }} className={utilStyles.headingPostTitleId}>{postData.title}</h1>
                     <div style={{ marginTop: '8px', marginBottom: '4px' }} className={utilStyles.lightText}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                            <span style={{ marginLeft: '0px', marginRight: '5px', fontSize: '20px' }}><AiOutlineCalendar /></span>
+                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsCalendar2Date /></span>
                             <Date dateString={postData.date} />
                             <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
-                            <span style={{ marginLeft: '2px', marginRight: '5px', fontSize: '22px' }}><AiOutlineRead /></span>
+                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsClockHistory /></span>
                             <span>
                                 <WordCount input={postData.contentHtml} /> min read
                             </span>
@@ -40,7 +42,7 @@ export default function Post({
                     </div>
                     <div
                         className={utilStyles.content}
-                        style={{ marginBottom: '-1rem' }}
+                        style={{ marginBottom: '-0.85rem' }}
                         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                     />
                 </article>

@@ -38,9 +38,9 @@ export default function PostsPage() {
             <Head>
                 <title>About me</title>
             </Head>
-            <section className={utilStyles.introSectionAllPosts}>
+            <section className={utilStyles.introSectionAbout}>
                 <div className={utilStyles.headingAllPosts}>
-                    <h1 style={{ marginTop: '-10px', marginBottom: '3px' }} className={utilStyles.headingPostTitle}>About Me</h1>
+                    <h1 style={{ marginTop: '-10px' }} className={utilStyles.headingPostTitle}>About Me</h1>
                 </div>
                 <h1 style={{ textAlign: 'left', lineHeight:'1.65rem'}} className={utilStyles.content}>
                     My name is Peter Sideris and I'm an Electrical Engineering student from Greece.
@@ -56,8 +56,8 @@ export default function PostsPage() {
                     (SBCs), like the Raspberry Pi. I'm eager to dive into the world of hardware and firmware development, leveraging my
                     skills to create efficient and reliable solutions.
                 </h1>
-                <hr style={{ marginTop: '10px', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
-                <h1 className={utilStyles.headingProjects}>Notable Projects</h1>
+                <hr style={{ marginTop: '6px', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
+                <h1 className={utilStyles.headingProjects}>Key Projects</h1>
                 <div className={utilStyles.projectsContainer}>
                     {notableProjects.map((project, index) => (
                         <ProjectCard key={index} title={project.title} description={project.description} url={project.url} />
