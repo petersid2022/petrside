@@ -152,9 +152,9 @@
 .introSection {
   border: 1px solid #141d26;
   padding-top: 2rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
-  padding-bottom: 1rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  padding-bottom: 0.8rem;
   background-color: #fbf8fd;
   border-radius: 8px;
 }
@@ -162,8 +162,8 @@
 .PostSection {
   border: 1px solid #141d26;
   padding-top: 1.8rem;
-  padding-left: 1.3rem;
-  padding-right: 1.3rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   padding-bottom: 1.5rem;
   background-color: #fbf8fd;
   border-radius: 8px;
@@ -171,8 +171,8 @@
 
 .introSectionAllPosts {
   padding-top: 1rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
   padding-bottom: .6rem;
   background-color: #FBF8FD;
   border-radius: 8px;

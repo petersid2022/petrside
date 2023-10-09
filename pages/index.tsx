@@ -42,7 +42,7 @@ export default function Home({ allPostsData }: HomeProps) {
                 <div className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingAbout}>About</h2>
                     <button style={{ fontSize: '25px', marginTop: '-30px' }} onClick={toggleDarkMode}>
-                        {isDarkMode ? <BsFillMoonStarsFill /> : <BsFillSunFill />}
+                        {isDarkMode ? <BsFillSunFill /> : <BsFillMoonStarsFill />}
                     </button>
                 </div>
                 <p style={{ marginTop: '-1px' }} className={utilStyles.introText}>
