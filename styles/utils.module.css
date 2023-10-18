@@ -85,14 +85,12 @@
 .headingAbout {
   font-weight: 500;
   font-size: 2rem;
-  margin-bottom: 0px;
-  margin-top: -1.8rem;
+  margin: 0px 0px;
 }
 
 .headingLg {
   font-weight: 500;
   font-size: 2rem;
-  line-height: 1.4;
   margin: 0px 0px;
 }
 
@@ -147,11 +145,11 @@
 .lightText {
   color: #666;
   margin-top: -5px;
+  text-decoration: none;
 }
 
 .introSection {
   border: 1px solid #141d26;
-  padding-top: 1.8rem;
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 0.58rem;
@@ -205,6 +203,7 @@
 .showlinksBorderContainer {
   display: flex;
   align-items: center;
+  margin: 10px 0px 15px;
 }
 
 .showlinksBorder {
@@ -256,11 +255,7 @@
   text-decoration: none;
   color: #333;
   font-weight: 600;
-}
-
-.postLinkH1 {
-  color: #333;
-  text-decoration: none;
+  display: inline-block;
 }
 
 .postLink:hover {
@@ -278,6 +273,8 @@
   width: 100%;
   text-align: center;
   font-size: 1rem;
+  line-height: 1.4;
+  padding: 0px 0px 5px;
 }
 
 .content {
@@ -374,8 +371,8 @@
 }
 
 .iconTextLight:hover {
-  background-color: #b297a4;
-  border-color: #b297a4;
+  background-color: #f9f9f9;
+  border-color: #f9f9f9;
 }
 
 .iconTextLight:focus {
@@ -485,38 +482,23 @@
 }
 
 @media (max-width: 767px) {
+  .postItem {
+    margin-bottom: 0px;
+  }
   .footer {
     position: fixed;
-    bottom: 10px;
+    bottom: 0;
     left: 0;
     width: 100%;
     text-align: center;
     font-size: 1rem;
-  }
-
-  .SoftBorderAroundLatestPost {
-    border: 1px solid #282a36;
-    padding: 0px 8px;
-    border-radius: 5px;
-    width: auto;
-    background-color: #fbf8fd;
-    text-decoration: none;
-    transition: background-color 0.05s, color 0.05s, border-color 0.05s;
-  }
-
-  .SoftBorderAroundAbout {
-    border: 2px dashed #282a36;
-    padding: 10px 16px;
-    line-height: 1.2;
-    border-radius: 5px;
-    width: auto;
-    background-color: #f0f0f0;
-    text-decoration: none;
+    line-height: 1.4;
+    padding: 0px 0px 5px;
   }
 
   .NameCss {
     font-size: 2.5rem;
-    letter-spacing: -0.05rem;
+    letter-spacing: -0.03rem;
     font-weight: 800;
     margin-top: 15px;
     margin-bottom: 19px;
@@ -555,13 +537,12 @@
   }
 
   .showAllLink {
-    margin-top: 2px;
     text-decoration: none;
     color: #141d26;
     font-weight: 500;
     font-size: 20px;
     border: 2px solid #141d26;
-    padding: 10px 10px;
+    padding: 3px 3px;
     border-radius: 5px;
     transition: background-color 0.05s, color 0.05s, border-color 0.05s;
     display: inline-block;
@@ -582,8 +563,7 @@
 
   .lightText {
     color: #666;
-    margin-top: 7px;
-    margin-bottom: 7px;
+    margin-top: -5px;
   }
 
   .borderCircle {
@@ -623,7 +603,7 @@
 
   .postLink {
     text-decoration: none;
-    margin: 10px 0px;
+    margin: 3px 0px 13px;
     color: #333;
     font-size: 17px;
     font-weight: 600;
@@ -640,8 +620,7 @@
   .headingAbout {
     font-weight: 500;
     font-size: 2rem;
-    margin-top: -20px;
-    margin-bottom: 10px;
+    margin: 10px 0px;
   }
 
   .headingLg {
