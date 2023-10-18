@@ -4,7 +4,6 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import { TiArrowBack } from 'react-icons/ti';
 import { useRouter } from 'next/router'
-import { useDarkMode } from '../components/DarkModeProvider';
 
 const name = 'Peter Sideris';
 export const siteTitle = 'Peter Sideris';
@@ -17,7 +16,6 @@ export default function Layout({
     home?: boolean;
 }) {
     const router = useRouter()
-    const { isDarkMode } = useDarkMode();
 
     const goBack = () => {
         router.back()
@@ -27,7 +25,7 @@ export default function Layout({
         <div className={styles.container}>
             <Head>
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-                <meta name="description" content="petrside" />
+                <meta name="description" content={siteTitle} />
                 <meta name="og:title" content={siteTitle} />
             </Head>
             <header className={styles.header}>
@@ -43,11 +41,7 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
-                        {isDarkMode ?
-                            <h1 style={{ margin: '10px 0px', color: '#fbf8fd' }} className={utilStyles.NameCss}>{name}</h1>
-                            :
-                            <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
-                        }
+                        <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
                     </>
                 ) : (
                     <>
@@ -58,19 +52,10 @@ export default function Layout({
                 <div style={{ marginRight: '50px', marginBottom: '10px' }}>
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
-                            {isDarkMode ?
-                                <span style={{
-                                    color: '#fff',
-                                }} className={utilStyles.iconText}>
-                                    <TiArrowBack className={utilStyles.icon} />
-                                    Go Back
-                                </span>
-                                :
-                                <span className={utilStyles.iconTextLight}>
-                                    <TiArrowBack className={utilStyles.icon} />
-                                    Go Back
-                                </span>
-                            }
+                            <span className={utilStyles.iconTextLight}>
+                                <TiArrowBack className={utilStyles.icon} />
+                                Go Back
+                            </span>
                         </button>
                     </div>
                 </div>
