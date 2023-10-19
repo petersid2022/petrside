@@ -6,8 +6,6 @@ import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { RxDotFilled } from 'react-icons/rx';
-//import { AiOutlineRead } from 'react-icons/ai';
-//import { AiOutlineCalendar } from 'react-icons/ai';
 import { BsCalendar2Date } from 'react-icons/bs';
 import { BsClockHistory } from 'react-icons/bs';
 

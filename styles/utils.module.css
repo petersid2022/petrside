@@ -300,9 +300,8 @@
 .content blockquote {
   border-color: #CCC;
   border-width: 2px;
-  border-style: dashed;
-  border-left: 4px solid #333;
-  padding: 1em;
+  border-style: solid;
+  padding: 0.2em 0.5em 0.2em;
   margin: 0.5em 0;
   background-color: #f9f9f9;
 }
@@ -315,9 +314,8 @@
 
 .content blockquote footer {
   margin-top: 0.5em;
-  text-align: right;
   font-size: 0.9em;
-  color: #777;
+  color: red;
 }
 
 .content a {
