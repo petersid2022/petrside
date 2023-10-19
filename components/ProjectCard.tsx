@@ -14,7 +14,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, url }) =>
         <div className={utilStyles.ProjectsBox}>
             <Link style={{ textDecoration: 'none', color: '#333' }} href={url} target="_blank" rel="noopener noreferrer">
                 <div className={utilStyles.projectCard}>
-                    <h2>{title}</h2>
+                    <h1>{title}</h1>
                     <p>{description}</p>
                 </div>
             </Link>

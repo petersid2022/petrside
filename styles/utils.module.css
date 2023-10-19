@@ -24,21 +24,31 @@
 }
 
 .projectCard {
+  border: 1px solid #141d26;
   width: auto;
-  padding: 0px 10px;
+  padding: 5px 20px;
   overflow-wrap: break-word;
+  background-color: #fbf8fd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
 }
 
-.projectCard h2 {
+.projectCard:hover {
+  transform: scale(1.02);
+}
+
+.projectCard h1 {
   font-size: 1.5rem;
   overflow-wrap: break-word;
-  margin-bottom: 0.5rem;
+  color: #333;
 }
 
 .projectCard p {
   font-size: 1rem;
   overflow-wrap: break-word;
-  color: #333;
+  color: #555;
+  line-height: 1.4;
 }
 
 .headingXl {
@@ -159,10 +169,7 @@
 
 .PostSection {
   border: 1px solid #141d26;
-  padding-top: 1.8rem;
-  padding-left: 1.2rem;
-  padding-right: 1.2rem;
-  padding-bottom: 1.5rem;
+  padding: 1rem 1.2rem 1rem;
   background-color: #fbf8fd;
   border-radius: 8px;
 }
@@ -279,6 +286,7 @@
 
 .content {
   font-size: 1.2rem;
+  text-align: justify;
   line-height: 1.6;
   color: #333;
 }
@@ -301,8 +309,9 @@
   border-color: #CCC;
   border-width: 2px;
   border-style: solid;
+  text-align: left;
   padding: 0.2em 0.5em 0.2em;
-  margin: 0.5em 0;
+  margin: 0.5rem 0rem;
   background-color: #f9f9f9;
 }
 
@@ -426,7 +435,7 @@
   width: auto;
   background-color: #fbf8fd;
   text-decoration: none;
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+  transition: transform 0.05s ease-in-out, box-shadow 0.05s ease-in-out;
 }
 
 .SoftBorderAroundLatestPost:hover {
@@ -438,9 +447,7 @@
   flex-grow: 1;
   justify-content: center;
   text-decoration: none;
-  border: 2px solid #ccc;
-  border-radius: 8px;
-  margin: 0px 2px 4px 2px;
+  margin: 0px 3px 5px 2px;
   transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
 }
 
@@ -562,6 +569,7 @@
   .lightText {
     color: #666;
     margin-top: -5px;
+    text-decoration: none;
   }
 
   .borderCircle {

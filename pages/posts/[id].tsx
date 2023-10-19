@@ -6,8 +6,6 @@ import WordCount from '../../components/wordcount';
 import utilStyles from '../../styles/utils.module.css';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import { RxDotFilled } from 'react-icons/rx';
-import { BsCalendar2Date } from 'react-icons/bs';
-import { BsClockHistory } from 'react-icons/bs';
 
 export default function Post({
     postData,
@@ -26,13 +24,11 @@ export default function Post({
             </Head>
             <section className={utilStyles.PostSection}>
                 <article>
-                    <h1 style={{ marginTop: '-20px' }} className={utilStyles.headingPostTitleId}>{postData.title}</h1>
-                    <div style={{ marginTop: '8px', marginBottom: '4px' }} className={utilStyles.lightText}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'flex-end' }}>
-                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsCalendar2Date /></span>
+                    <h1 className={utilStyles.headingPostTitleId}>{postData.title}</h1>
+                    <div style={{ marginTop:'12px' }} className={utilStyles.lightText}>
+                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
                             <Date dateString={postData.date} />
-                            <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
-                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsClockHistory /></span>
+                            <span style={{ marginLeft: '3px', marginRight: '3px', fontSize: '10px' }}><RxDotFilled /></span>
                             <span>
                                 <WordCount input={postData.contentHtml} /> min read
                             </span>
@@ -40,7 +36,6 @@ export default function Post({
                     </div>
                     <div
                         className={utilStyles.content}
-                        style={{ marginBottom: '-0.85rem' }}
                         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                     />
                 </article>

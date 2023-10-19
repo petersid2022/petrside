@@ -8,8 +8,6 @@ import Date from '../components/date';
 import WordCount from '../components/wordcount';
 import { getPostData } from '../lib/posts';
 import { RxDotFilled } from 'react-icons/rx';
-import { BsCalendar2Date } from 'react-icons/bs';
-import { BsClockHistory } from 'react-icons/bs';
 
 interface HomeProps {
     allPostsData: {
@@ -63,10 +61,8 @@ export default function Home({ allPostsData }: HomeProps) {
                             <h1 className={utilStyles.postLink}>{latestPost.title}</h1>
                         </Link>
                         <div style={{ display: 'flex', alignItems: 'center' }} className={utilStyles.lightText}>
-                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsCalendar2Date /></span>
                             <Date dateString={latestPost.date} />
-                            <span style={{ marginLeft: '6px', marginRight: '6px', fontSize: '8px' }}><RxDotFilled /></span>
-                            <span style={{ marginRight: '4px', fontSize: '16px' }}><BsClockHistory /></span>
+                            <span style={{ marginLeft: '3px', marginRight: '3px', fontSize: '10px' }}><RxDotFilled /></span>
                             <span>
                                 <WordCount input={latestPost.contentHtml} /> min read
                             </span>
