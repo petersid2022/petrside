@@ -24,11 +24,10 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             <Head>
                 <title>All Blog Posts</title>
             </Head>
-            <section className={utilStyles.introSectionAllPosts}>
-                <div className={utilStyles.headingAllPosts}>
-                    <h1 style={{ marginTop: '-10px', marginBottom: '-1px' }} className={utilStyles.headingPostTitle}>All Blog Posts</h1>
-                </div>
-                <ul style={{ marginTop: '10px' }} className={utilStyles.postList}>
+            <section className={utilStyles.PostSection}>
+                <h1 className={utilStyles.headingPostTitleId}>All Blog Posts</h1>
+                <div style={{ height: '15px' }}></div>
+                <ul className={utilStyles.postList}>
                     {allPostsData.map((post) => (
                         <li className={utilStyles.postItem} key={post.id}>
                             <Link style={{ textDecoration: 'none' }} href={`/posts/${post.id}`}>

@@ -34,7 +34,7 @@ export default function PostsPage() {
         },
         {
             title: 'skroutz-prosfores-scraper-go',
-            description: 'Web scraper written in Go, that scrapes any new deals on skroutz.gr',
+            description: 'Web scraper written in Go, that scrapes for any new deals on skroutz.gr',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
     ];
@@ -44,10 +44,8 @@ export default function PostsPage() {
                 <title>About me</title>
             </Head>
             <section className={utilStyles.introSectionAbout}>
-                <div className={utilStyles.headingAllPosts}>
-                    <h1 style={{ marginTop: '-10px' }} className={utilStyles.headingPostTitle}>About Me</h1>
-                </div>
-                <h1 style={{ textAlign: 'justify', lineHeight:'1.65rem'}} className={utilStyles.content}>
+                <h1 style={{marginBottom:'1rem'}} className={utilStyles.headingPostTitleId}>About Me</h1>
+                <h1 style={{ textAlign: 'justify', lineHeight: '1.65rem' }} className={utilStyles.content}>
                     My name is Peter Sideris and I'm an Electrical Engineering student from Greece.
                     I am extremely thrilled to be working in the field of
                     engineering, particularly with new and cutting-edge technologies in both hardware and software
@@ -61,8 +59,8 @@ export default function PostsPage() {
                     (SBCs), like the Raspberry Pi. I'm eager to dive into the world of hardware and firmware development, leveraging my
                     skills to create efficient and reliable solutions.
                 </h1>
-                <hr style={{ marginTop: '6px', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
-                <h1 style={{margin:'10px 0px'}} className={utilStyles.headingProjects}>Notable Projects</h1>
+                <hr style={{ margin: '1rem 0rem', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
+                <h1 style={{ margin: '10px 0px 18px' }} className={utilStyles.headingProjects}>Cool projects I've worked on include:</h1>
                 <div className={utilStyles.projectsContainer}>
                     {notableProjects.map((project, index) => (
                         <ProjectCard key={index} title={project.title} description={project.description} url={project.url} />

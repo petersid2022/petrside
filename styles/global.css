@@ -29,15 +29,7 @@ html,body {
   line-height: 1.6;
   font-size: 18px;
   z-index: 5;
-  background-color: #ccc;
-}
-
-html.dark-mode {
-  background-color: #141d26;
-}
-
-body.dark-mode {
-  background-color: #141d26;
+  background-color: #c0c2ce;
 }
 
 * {
@@ -100,18 +92,9 @@ hr {
       sans-serif;
     line-height: 1;
     font-size: 14px;
-    background-color: #ccc;
-  
+    background-color: #bbbfb9;
   }
   
-  html.dark-mode {
-    background-color: #141d26;
-  }
-  
-  body.dark-mode {
-    background-color: #141d26;
-  }
-
   * {
     box-sizing: border-box;
   }
