@@ -27,9 +27,9 @@ html,body {
     Helvetica Neue,
     sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: 20px;
   z-index: 5;
-  background-color: #c0c2ce;
+  background-color: #e6ecf0;
 }
 
 * {
@@ -92,7 +92,7 @@ hr {
       sans-serif;
     line-height: 1;
     font-size: 14px;
-    background-color: #bbbfb9;
+    background-color: #e6ecf0;
   }
   
   * {

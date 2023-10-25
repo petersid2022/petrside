@@ -154,7 +154,7 @@
 }
 
 .introSection {
-  border: 1px solid #141d26;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding-left: 1rem;
   padding-right: 1rem;
   padding-bottom: 0.58rem;
@@ -163,20 +163,21 @@
 }
 
 .PostSection {
-  border: 1px solid #141d26;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 1rem 1.2rem 1rem;
   background-color: #fbf8fd;
   border-radius: 8px;
 }
 
 .introSectionAbout {
-  border: 1px solid #141d26;
-  padding: 1rem 1.2rem 1.2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 0.9rem 1.2rem 1.2rem;
   background-color: #fbf8fd;
   border-radius: 8px;
 }
 
 .introSectionAllPosts {
+  border: 1px solid #141d26;
   padding: 0rem 1rem 0.5rem;
   background-color: #FBF8FD;
   border-radius: 8px;
@@ -367,8 +368,8 @@
 }
 
 .iconTextLight:hover {
-  background-color: #fbf8fd;
-  border-color: #fbf8fd;
+  background-color: #dbdcff;
+  border-color: #222222;
 }
 
 .iconTextLight:focus {
