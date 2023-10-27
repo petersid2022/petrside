@@ -24,23 +24,16 @@
 }
 
 .projectCard {
-  border: 1px solid #141d26;
+  border: 1px solid #353839;
   width: auto;
-  padding: 0px 7px;
+  padding: 0px 7px 2px;
   overflow-wrap: break-word;
   background-color: #fbf8fd;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-}
-
-.projectCard:hover {
-  transform: scale(1.02);
 }
 
 .projectCard h1 {
   font-size: 1.5rem;
   overflow-wrap: break-word;
-  color: #333;
 }
 
 .projectCard p {
@@ -369,7 +362,7 @@
 
 .iconTextLight:hover {
   background-color: #dbdcff;
-  border-color: #222222;
+  border-color: #141d26;
 }
 
 .iconTextLight:focus {
@@ -438,16 +431,10 @@
   justify-content: center;
   text-decoration: none;
   margin: 2px 2px;
-  transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
-}
-
-.ProjectsBox:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .SoftBorderAroundAllPost {
-  border: 1px solid #141d26;
+  border: 2px solid #ccc;
   padding: 0px 8px;
   margin: 10px 10px;
   border-radius: 5px;

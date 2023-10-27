@@ -29,7 +29,7 @@ export default function PostsPage() {
         },
         {
             title: 'riscv-emulator',
-            description: 'RV32I emulator in Rust',
+            description: 'RV32I ISA emulator in Rust',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
         {
