@@ -25,27 +25,33 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                 <title>All Blog Posts</title>
             </Head>
             <section className={utilStyles.PostSection}>
-                <h1 className={utilStyles.headingPostTitleId}>All Blog Posts</h1>
-                <div style={{ height: '15px' }}></div>
-                <ul className={utilStyles.postList}>
+                <h1 className={`${utilStyles.headingPostTitleId} text-2xl font-bold mb-4`}>
+                    All Blog Posts
+                </h1>
+                <ul className="space-y-3">
                     {allPostsData.map((post) => (
-                        <li className={utilStyles.postItem} key={post.id}>
+                        <li
+                            key={post.id}
+                            className="border-2 border-gray-300 px-2 py-1 rounded-lg hover:bg-gray-200 hover:border-gray-500"
+                        >
                             <Link style={{ textDecoration: 'none' }} href={`/posts/${post.id}`}>
-                                <div className={utilStyles.SoftBorderAroundAllPost}>
-                                    <h1 style={{ textDecoration: 'none' }} className={utilStyles.postLink}>{post.title}</h1>
-                                    <div style={{ display: 'flex', alignItems: 'center' }} className={utilStyles.lightText}>
-                                        <div >
-                                            {new Date(post.date).toLocaleDateString('en-GB', {
-                                                day: '2-digit',
-                                                month: 'long',
-                                                year: 'numeric',
-                                            })}
-                                        </div>
-                                        <span style={{ marginLeft: '3px', marginRight: '3px', fontSize: '10px' }}><RxDotFilled /></span>
-                                        <span>
-                                            <WordCount input={post.contentHtml} /> min read
-                                        </span>
-                                    </div>
+                                <p className="text-xl font-medium text-slate-950">
+                                    {post.title}
+                                </p>
+                                <div className="text-gray-500 text-base mt-2 flex items-center">
+                                    <span>
+                                        {new Date(post.date).toLocaleDateString('en-GB', {
+                                            day: '2-digit',
+                                            month: 'long',
+                                            year: 'numeric',
+                                        })}
+                                    </span>
+                                    <span className="mx-2">
+                                        <RxDotFilled />
+                                    </span>
+                                    <span>
+                                        <WordCount input={post.contentHtml} /> minute read
+                                    </span>
                                 </div>
                             </Link>
                         </li>
@@ -76,3 +82,4 @@ export async function getStaticProps() {
         },
     };
 }
+

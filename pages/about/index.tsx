@@ -9,7 +9,7 @@ export default function PostsPage() {
     const notableProjects = [
         {
             title: 'greek_stemmer',
-            description: 'Greek Stemmer Library written in Go',
+            description: 'Stemmer library written in Go, enabling various NLP tasks using the Greek language',
             url: 'https://github.com/petersid2022/greek_stemmer',
         },
         {
@@ -19,22 +19,22 @@ export default function PostsPage() {
         },
         {
             title: 'RackJS',
-            description: 'Webapp for managing kitchen inventory, written in React',
+            description: 'Webapp for managing kitchen inventory, built with modern webdev tools',
             url: 'https://github.com/petersid2022/rackjs',
         },
         {
             title: 'petrside.gr',
-            description: 'My personal website, built using Next.js',
+            description: 'This very website, that serves as my personal portfolio/blog, built using Next.js',
             url: 'https://github.com/petersid2022/petrside',
         },
         {
-            title: 'riscv-emulator',
-            description: 'RV32I ISA emulator in Rust',
+            title: 'skroutz-prosfores-scraper-go',
+            description: 'CLI based web-scraper written in Go, that scrapes for any new deals on skroutz.gr',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
         {
-            title: 'skroutz-prosfores-scraper-go',
-            description: 'Web scraper written in Go, that scrapes for any new deals on skroutz.gr',
+            title: 'riscv-emulator',
+            description: 'Emulator for a CPU implementing the RISC-V RV32I instruction set architecture, written in Rust',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
     ];
@@ -44,7 +44,7 @@ export default function PostsPage() {
                 <title>About me</title>
             </Head>
             <section className={utilStyles.introSectionAbout}>
-                <h1 style={{marginBottom:'1rem'}} className={utilStyles.headingPostTitleId}>About Me</h1>
+                <h1 style={{ marginBottom: '1rem' }} className={utilStyles.headingPostTitleId}>About Me</h1>
                 <h1 style={{ textAlign: 'justify', lineHeight: '1.65rem' }} className={utilStyles.content}>
                     My name is Peter Sideris and I'm an Electrical Engineering student from Greece.
                     I am extremely thrilled to be working in the field of
@@ -61,9 +61,21 @@ export default function PostsPage() {
                 </h1>
                 <hr style={{ margin: '1rem 0rem', borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
                 <h1 style={{ margin: '10px 0px 18px' }} className={utilStyles.headingProjects}>Cool projects I've worked on include:</h1>
+                {/*
                 <div className={utilStyles.projectsContainer}>
                     {notableProjects.map((project, index) => (
                         <ProjectCard key={index} title={project.title} description={project.description} url={project.url} />
+                    ))}
+                </div>
+                */}
+                <div className="w-full flex flex-wrap gap-2 gap-y-3 justify-around">
+                    {notableProjects.map((project, index) => (
+                        <ProjectCard
+                            key={index}
+                            title={project.title}
+                            description={project.description}
+                            url={project.url}
+                        />
                     ))}
                 </div>
             </section>

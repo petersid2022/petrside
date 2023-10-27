@@ -72,7 +72,7 @@ export default function Home({ allPostsData }: HomeProps) {
             </section>
             <footer className={utilStyles.footer}>
                 <div>
-                    <p style={{ color: '#000' }}>© Peter Sideris. All rights and lefts reserved.</p>
+                    <p style={{ color: '#000' }}>© Peter Sideris. All rights reserved.</p>
                     <Link style={{ display: 'inline-block', color: '#000' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                         <p>Made with ❤️ using Next.js</p>
                     </Link>

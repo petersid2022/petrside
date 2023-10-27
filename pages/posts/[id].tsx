@@ -25,7 +25,7 @@ export default function Post({
             <section className={utilStyles.PostSection}>
                 <article>
                     <h1 className={utilStyles.headingPostTitleId}>{postData.title}</h1>
-                    <div style={{ marginTop:'12px' }} className={utilStyles.lightText}>
+                    <div style={{ marginTop:'10px', marginBottom:'5px' }} className={utilStyles.lightText}>
                         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
                             <Date dateString={postData.date} />
                             <span style={{ marginLeft: '3px', marginRight: '3px', fontSize: '10px' }}><RxDotFilled /></span>

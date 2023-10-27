@@ -41,7 +41,7 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
-                        <h1 style={{ margin: '10px 0px', color: '#141d26' }} className={utilStyles.NameCss}>{name}</h1>
+                        <h1 className={utilStyles.NameCss}>{name}</h1>
                     </>
                 ) : (
                     <>
@@ -52,10 +52,12 @@ export default function Layout({
                 <div style={{ marginRight: '50px', marginBottom: '10px' }}>
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} style={{ textDecoration: 'none' }}>
-                            <span className={utilStyles.iconTextLight}>
-                                <TiArrowBack className={utilStyles.icon} />
-                                Go Back
-                            </span>
+                            <div className="hover:bg-indigo-300 rounded">
+                                <span className={utilStyles.iconTextLight} >
+                                    <TiArrowBack className={utilStyles.icon} />
+                                    Go Back
+                                </span>
+                            </div>
                         </button>
                     </div>
                 </div>
