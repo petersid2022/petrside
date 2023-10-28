@@ -7,6 +7,7 @@ import { useRouter } from 'next/router'
 
 const name = 'Peter Sideris';
 export const siteTitle = 'Peter Sideris';
+const image = '/images/profile.jpg';
 
 export default function Layout({
     children,
@@ -24,14 +25,18 @@ export default function Layout({
     return (
         <div className={styles.container}>
             <Head>
-                <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+                <meta name="robots" content="follow, index" />
+                <meta name="description" content={name} />
+                <meta property="og:site_name" content={name} />
+                <meta property="og:description" content={name} />
+                <meta property="og:title" content={name} />
+                <meta property="og:image" content={image} />
                 <meta name="description" content={siteTitle} />
                 <meta name="og:title" content={siteTitle} />
             </Head>
             <header className={styles.header}>
                 {home ? (
                     <>
-                        <div style={{ marginTop: '12px' }}></div>
                         <Image
                             priority={true}
                             src="/images/profile.jpg"
@@ -41,7 +46,9 @@ export default function Layout({
                             quality={100}
                             alt={name}
                         />
-                        <h1 className={utilStyles.NameCss}>{name}</h1>
+                        <div className="flex items-center py-5">
+                            <h1 className="text-5xl tracking-tight font-extrabold text-gray-900 items-center">{name}</h1>
+                        </div>
                     </>
                 ) : (
                     <>
@@ -49,17 +56,9 @@ export default function Layout({
                 )}
             </header>
             {!home && (
-                <div style={{ marginRight: '50px', marginBottom: '10px' }}>
+                <div className="mb-2">
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} className="hover:no-underline">
-                            {/*
-                            <div className="hover:bg-indigo-300 rounded">
-                                <span className={utilStyles.iconTextLight} >
-                                    <TiArrowBack className={utilStyles.icon} />
-                                    Go Back
-                                </span>
-                            </div>
-                        */}
                             <div className="bg-transparent hover:bg-[#fbf8fd] text-gray-800 font-semibold py-0 px-0 border border-transparent hover:border-gray-300 rounded hover:shadow">
                                 <span className={utilStyles.iconTextLight} >
                                     <TiArrowBack className={utilStyles.icon} />

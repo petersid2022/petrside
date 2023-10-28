@@ -22,24 +22,24 @@ export default function Post({
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <section className={utilStyles.PostSection}>
-                <article>
-                    <h1 className={utilStyles.headingPostTitleId}>{postData.title}</h1>
-                    <div style={{ marginTop:'10px', marginBottom:'5px' }} className={utilStyles.lightText}>
-                        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'start' }}>
-                            <Date dateString={postData.date} />
-                            <span style={{ marginLeft: '3px', marginRight: '3px', fontSize: '10px' }}><RxDotFilled /></span>
-                            <span>
-                                <WordCount input={postData.contentHtml} /> min read
-                            </span>
-                        </div>
+            <div className="bg-white max-w-fit rounded overflow-hidden shadow-xl">
+                <div className="px-6 py-4">
+                    <div className="font-bold text-3xl">{postData.title}</div>
+                    <div className="py-2 text-gray-500 text-base flex items-center">
+                        <Date dateString={postData.date} />
+                        <span className="mx-2 text-sm">
+                            <RxDotFilled />
+                        </span>
+                        <span>
+                            <WordCount input={postData.contentHtml} /> min read
+                        </span>
                     </div>
                     <div
                         className={utilStyles.content}
                         dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
                     />
-                </article>
-            </section>
+                </div>
+            </div>
         </Layout>
     );
 }
