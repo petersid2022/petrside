@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
-import ProjectCard from '../../components/ProjectCard'; // Adjust the import path as needed
+import ProjectCard from '../../components/ProjectCard';
 
 export default function PostsPage() {
 
@@ -19,7 +19,7 @@ export default function PostsPage() {
         },
         {
             title: 'RackJS',
-            description: 'Webapp for managing kitchen inventory, built with modern webdev tools',
+            description: 'Webapp for managing kitchen inventory, built using the MERN stack',
             url: 'https://github.com/petersid2022/rackjs',
         },
         {
@@ -29,12 +29,12 @@ export default function PostsPage() {
         },
         {
             title: 'skroutz-prosfores-scraper-go',
-            description: 'CLI based web-scraper written in Go, that scrapes for any new deals on skroutz.gr',
+            description: 'CLI based scraper written in Go, that scrapes for any deals on skroutz',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
         {
             title: 'riscv-emulator',
-            description: 'Emulator for a CPU implementing the RISC-V RV32I instruction set architecture, written in Rust',
+            description: 'RISC-V (RV32I) emulator written in Rust, currently supporting only RV32I instructions',
             url: 'https://github.com/petersid2022/skroutz-prosfores-scraper-go',
         },
     ];

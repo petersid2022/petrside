@@ -7,7 +7,7 @@ import Link from 'next/link';
 import Date from '../components/date';
 import WordCount from '../components/wordcount';
 import { getPostData } from '../lib/posts';
-import { RxDotFilled } from 'react-icons/rx';
+import { RxDotFilled, RxGithubLogo } from 'react-icons/rx';
 
 interface HomeProps {
     allPostsData: {
@@ -32,27 +32,24 @@ export default function Home({ allPostsData }: HomeProps) {
                     Welcome to my blog! I'm Peter Sideris (petrside), an Electrical Engineering student based in Greece. This is where I'm going to post anything I happen to find interesting or cool. Thanks for stopping by!
                 </p>
                 <div className={utilStyles.showlinksBorderContainer}>
-                    <Link href="/about">
-                        <span className={utilStyles.showlinksBorder}>About Me</span>
+                    <Link className="hover:no-underline" href="/about">
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">About Me</h1>
                     </Link>
-                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
-                    <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                        <span className={utilStyles.showlinksBorder}>Resume</span>
+                    <Link className="ml-4 mr-2 hover:no-underline" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">Resume</h1>
                     </Link>
-                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
-                    <Link href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
-                        <span className={utilStyles.showlinksBorder}>GitHub</span>
+                    <Link className="mx-2 hover:no-underline" href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">GitHub</h1>
                     </Link>
-                    <div style={{ width: '15px', visibility: 'hidden' }}></div>
-                    <Link href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
-                        <span className={utilStyles.showlinksBorder}>LinkedIn</span>
+                    <Link className="ml-2 hover:no-underline" href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">LinkedIn</h1>
                     </Link>
                 </div>
                 <hr style={{ borderColor: '#ccc', borderWidth: '2px', borderStyle: 'dashed' }} />
                 <div className={utilStyles.latestPostContainer}>
                     <h2 className={utilStyles.headingLg}>Latest Blog Post</h2>
-                    <Link href="/posts">
-                        <span className={utilStyles.showAllLink}>Show All</span>
+                    <Link className="hover:no-underline" href="/posts">
+                        <h1 className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0.5 px-2 border border-gray-400 rounded shadow">Show All</h1>
                     </Link>
                 </div>
                 <ul className={utilStyles.postList}>
@@ -72,7 +69,7 @@ export default function Home({ allPostsData }: HomeProps) {
             </section>
             <footer className={utilStyles.footer}>
                 <div>
-                    <p style={{ color: '#000' }}>© Peter Sideris. All rights reserved.</p>
+                    <p style={{ color: '#000' }}>© Peter Sideris. All Rights and Lefts reserved.</p>
                     <Link style={{ display: 'inline-block', color: '#000' }} href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                         <p>Made with ❤️ using Next.js</p>
                     </Link>

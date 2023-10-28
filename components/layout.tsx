@@ -51,8 +51,16 @@ export default function Layout({
             {!home && (
                 <div style={{ marginRight: '50px', marginBottom: '10px' }}>
                     <div className={utilStyles.headingDd}>
-                        <button onClick={goBack} style={{ textDecoration: 'none' }}>
+                        <button onClick={goBack} className="hover:no-underline">
+                            {/*
                             <div className="hover:bg-indigo-300 rounded">
+                                <span className={utilStyles.iconTextLight} >
+                                    <TiArrowBack className={utilStyles.icon} />
+                                    Go Back
+                                </span>
+                            </div>
+                        */}
+                            <div className="bg-transparent hover:bg-[#fbf8fd] text-gray-800 font-semibold py-0 px-0 border border-transparent hover:border-gray-300 rounded hover:shadow">
                                 <span className={utilStyles.iconTextLight} >
                                     <TiArrowBack className={utilStyles.icon} />
                                     Go Back

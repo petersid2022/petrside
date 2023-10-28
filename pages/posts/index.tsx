@@ -25,10 +25,8 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
                 <title>All Blog Posts</title>
             </Head>
             <section className={utilStyles.PostSection}>
-                <h1 className={`${utilStyles.headingPostTitleId} text-2xl font-bold mb-4`}>
-                    All Blog Posts
-                </h1>
-                <ul className="space-y-3">
+                <h1 className={utilStyles.headingPostTitleId}>All Blog Posts</h1>
+                <ul className="mt-5 mb-2 space-y-3">
                     {allPostsData.map((post) => (
                         <li
                             key={post.id}
