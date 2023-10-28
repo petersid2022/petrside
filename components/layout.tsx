@@ -61,7 +61,7 @@ export default function Layout({
                         <button onClick={goBack} className="hover:no-underline">
                             <div className="bg-transparent hover:bg-[#fbf8fd] text-gray-800 font-semibold py-0 px-0 border border-transparent hover:border-gray-300 rounded hover:shadow">
                                 <span className={utilStyles.iconTextLight} >
-                                    <TiArrowBack className={utilStyles.icon} />
+                                    <TiArrowBack className="mt-0.5 mr-0.5" />
                                     Go Back
                                 </span>
                             </div>

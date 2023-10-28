@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles for code blocks */
 pre {
   width: auto;
   padding: 10px;
@@ -56,7 +55,6 @@ hr {
   border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
 }
 
-
 /* Make only the scrollbar track transparent */
 ::-webkit-scrollbar {
   width: 10px; /* Width of the vertical scrollbar */
@@ -70,52 +68,4 @@ hr {
 ::-webkit-scrollbar-thumb {
   background-color: #111211; /* Color of the scrollbar thumb */
   border-radius: 0px; /* Rounded corners for the thumb */
-}
-
-
-@media (max-width: 767px) {
-  /* Styles for mobile devices */
-  html,body {
-    padding: 0;
-    margin: 0;
-    font-family:
-      -apple-system,
-      BlinkMacSystemFont,
-      Segoe UI,
-      Roboto,
-      Oxygen,
-      Ubuntu,
-      Cantarell,
-      Fira Sans,
-      Droid Sans,
-      Helvetica Neue,
-      sans-serif;
-    line-height: 1;
-    font-size: 14px;
-    background-color: #d9ead3;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
-  a {
-    color: #0070f3;
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-
-  img {
-    max-width: 40%;
-    display: block;
-  }
-
-  hr {
-    border-color: #282a36; /* Change the line color */
-    border-width: 2px; /* Adjust the line thickness */
-    border-style: dashed; /* Change the line style (e.g., dashed, dotted, solid) */
-  }
 }
