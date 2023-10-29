@@ -26,7 +26,7 @@ export default function Home({ allPostsData }: HomeProps) {
             <Head>
                 <title>{siteTitle}</title>
             </Head>
-            <div className="bg-white max-w-fit rounded overflow-hidden shadow-xl mb-20 sm:mb-0">
+            <div className="bg-white max-w-fit rounded overflow-hidden shadow-2xl mb-20 sm:mb-0">
                 <div className="px-6 py-4">
                     <div className="font-bold text-3xl mb-2">About</div>
                     <p className="text-gray-700 text-2xl text-justify">
@@ -68,7 +68,7 @@ export default function Home({ allPostsData }: HomeProps) {
                     </li>
                 </ul>
             </div>
-            <footer className="text-gray-800 fixed bottom-0 left-0 w-full text-center text-base leading-snug -z-10 pb-2"> 
+            <footer className="font-semibold text-gray-800 fixed bottom-0 left-0 w-full text-center text-base leading-snug -z-10 pb-2"> 
                 <p>&copy; Peter Sideris. All Rights and Lefts reserved.</p>
                 <Link className="inline-block" href={"https://github.com/petersid2022/petrside"} target="_blank" rel="noopener noreferrer">
                     <p>Made with &#x2764;&#xFE0F; using Next.js</p>

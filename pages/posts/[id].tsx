@@ -22,7 +22,7 @@ export default function Post({
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <div className="bg-white max-w-fit rounded overflow-hidden shadow-xl">
+            <div className="bg-white max-w-fit rounded overflow-hidden shadow-2xl">
                 <div className="px-6 py-4">
                     <div className="font-bold text-3xl">{postData.title}</div>
                     <div className="py-2 text-gray-500 text-base flex items-center">

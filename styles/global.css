@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply min-h-screen bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-zinc-400 via-amber-100 to-violet-100;
+    }
+}
+
 pre {
   width: auto;
   padding: 10px;
@@ -28,7 +34,6 @@ html,body {
   line-height: 1.6;
   font-size: 18px;
   z-index: 5;
-  background-color: #dde6d5; 
 }
 
 * {

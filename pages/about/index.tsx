@@ -42,7 +42,7 @@ export default function PostsPage() {
             <Head>
                 <title>About me</title>
             </Head>
-            <div className="bg-white max-w-fit rounded overflow-hidden shadow-xl">
+            <div className="bg-white max-w-fit rounded overflow-hidden shadow-2xl">
                 <div className="px-6 pt-4 pb-5">
                     <div className="font-bold text-3xl mb-2">Three things to know about me:</div>
                     <ul className="text-gray-700 text-xl text-justify mb-2 list-decimal list-inside">

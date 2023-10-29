@@ -47,7 +47,7 @@ export default function Layout({
                             alt={name}
                         />
                         <div className="flex items-center py-5">
-                            <h1 className="text-5xl tracking-tight font-extrabold text-gray-900 items-center">{name}</h1>
+                            <h1 className="text-5xl tracking-tight font-extrabold items-center text-transparent bg-clip-text bg-gradient-to-t from-gray-700 via-gray-900 to-black">{name}</h1>
                         </div>
                     </>
                 ) : (
@@ -59,7 +59,7 @@ export default function Layout({
                 <div className="mb-2">
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} className="hover:no-underline">
-                            <div className="bg-transparent hover:bg-[#fbf8fd] text-gray-800 font-semibold py-0 px-0 border border-transparent hover:border-gray-300 rounded hover:shadow">
+                            <div className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold px-1 rounded shadow">
                                 <span className={utilStyles.iconTextLight} >
                                     <TiArrowBack className="mt-0.5 mr-0.5" />
                                     Go Back

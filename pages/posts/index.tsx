@@ -2,7 +2,6 @@ import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 import Layout from '../../components/layout';
-import utilStyles from '../../styles/utils.module.css';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 import WordCount from '../../components/wordcount';
 import { RxDotFilled } from 'react-icons/rx';
@@ -24,7 +23,7 @@ export default function PostsPage({ allPostsData }: PostsPageProps) {
             <Head>
                 <title>All Blog Posts</title>
             </Head>
-            <div className="bg-white rounded overflow-hidden shadow-xl">
+            <div className="bg-white rounded overflow-hidden shadow-2xl">
                 <div className="px-6 py-4">
                     <div className="font-bold text-3xl mb-2">All Blog Posts</div>
                     <ul className="mt-5 mb-2 space-y-3">
