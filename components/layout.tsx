@@ -59,11 +59,9 @@ export default function Layout({
                 <div className="mb-2">
                     <div className={utilStyles.headingDd}>
                         <button onClick={goBack} className="hover:no-underline">
-                            <div className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold rounded shadow">
-                                <span className={utilStyles.iconTextLight} >
-                                    <TiArrowBack className="mr-0.5" />
-                                    Go Back
-                                </span>
+                            <div className="text-xl bg-white hover:bg-gray-100 font-bold rounded shadow inline-flex items-center px-2">
+                                <span className="-ml-0.5 mr-1"><TiArrowBack /></span>
+                                <span>Go Back</span>
                             </div>
                         </button>
                     </div>

@@ -42,36 +42,3 @@
 .content a {
   color: #0074d9;
 }
-
-.iconTextLight {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  border: 2px solid transparent;
-  padding: 0px 8px;
-  text-align: center;
-  width: auto;
-  color: #222222;
-}
-
-.iconText {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  border: 2px solid transparent;
-  padding: 0px 8px;
-  transition-delay: 100ms;
-  transition: background-color 0s, color 0s, border-color 0s;
-  border-radius: 5px;
-  text-align: center;
-  width: auto;
-}
-
-.iconText:hover {
-  background-color: #394859;
-  border-color: #394859;
-}
-
-.iconText:focus {
-  outline: none;
-}
