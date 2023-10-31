@@ -47,7 +47,7 @@ export default function Layout({
                             alt={name}
                         />
                         <div className="flex items-center py-5">
-                            <h1 className="text-5xl tracking-tight font-extrabold items-center text-transparent bg-clip-text bg-gradient-to-t from-gray-700 via-gray-900 to-black">{name}</h1>
+                            <h1 className="text-5xl tracking-tight font-extrabold items-center text-transparent bg-clip-text bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-blue-500 via-slate-800 to-gray-900">{name}</h1>
                         </div>
                     </>
                 ) : (
