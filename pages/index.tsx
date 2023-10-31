@@ -35,22 +35,22 @@ export default function Home({ allPostsData }: HomeProps) {
                 </div>
                 <div className="flex flex-col md:flex-row md:items-center md:pl-6 pb-4 px-6 text-center">
                     <Link className="hover:no-underline mb-2 md:mb-0" href="/about">
-                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">About Me</h1>
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded">About Me</h1>
                     </Link>
                     <Link className="md:ml-4 md:mr-2 hover:no-underline mb-2 md:mb-0" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">Resume</h1>
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded">Resume</h1>
                     </Link>
                     <Link className="md:mx-2 hover:no-underline mb-2 md:mb-0" href="https://github.com/petersid2022" target="_blank" rel="noopener noreferrer">
-                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">GitHub</h1>
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded">GitHub</h1>
                     </Link>
                     <Link className="md:ml-2 hover:no-underline mb-2 md:mb-0" href="https://www.linkedin.com/in/petros-sideris-a7bb50281" target="_blank" rel="noopener noreferrer">
-                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded shadow">LinkedIn</h1>
+                        <h1 className="text-xl bg-white hover:bg-gray-100 text-gray-800 font-semibold py-1 px-2 border border-gray-400 rounded">LinkedIn</h1>
                     </Link>
                 </div>
                 <div className="px-6 flex items-center justify-between">
                     <div className="font-bold text-3xl mb-2">Latest Blog Post</div>
                     <Link className="hover:no-underline" href="/posts">
-                        <h1 className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0.5 px-2 border border-gray-400 rounded shadow">Show All</h1>
+                        <h1 className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-0.5 px-2 border border-gray-400 rounded">Show All</h1>
                     </Link>
                 </div>
                 <ul className="px-6 pb-4 list-none">
